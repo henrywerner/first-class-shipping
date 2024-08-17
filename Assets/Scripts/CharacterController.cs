@@ -21,17 +21,25 @@ public class CharacterController : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        if (Input.GetAxis("Fire1") != 0)
+        {
+            FireGuns();
+        }
     }
 
     public void Move()
     {
-        // calculate the move amount
+        // calculate movement amount
         float verticalMoveThisFrame = Input.GetAxis("Vertical") * _moveSpeed;
         float horizontalMoveThisFrame = Input.GetAxis("Horizontal") * _moveSpeed;
         // create a vector from amount and direction
         Vector2 moveOffset = (transform.up * verticalMoveThisFrame) + (transform.right * horizontalMoveThisFrame);
         // apply vector to the rigidbody
         _rb2D.MovePosition(_rb2D.position + moveOffset);
-        // technically adjusting vector is more accurate! (but more complex)
+    }
+
+    public void FireGuns()
+    {
+        // TODO
     }
 }
