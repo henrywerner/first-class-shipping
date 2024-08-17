@@ -4,6 +4,13 @@ using UnityEngine;
 
 public abstract class EnemyBase : MonoBehaviour
 {
-    [SerializeField] private Transform[] _paths;
+    [SerializeField] protected Transform[] _paths;
+    [SerializeField] protected float _pathSpeedModifier = 0.5f;
+
+    protected BezierMoveAlongPath _pathMover;
+
+    protected void Awake() {
+        _pathMover = FindFirstObjectByType<BezierMoveAlongPath>();
+    }
     
 }

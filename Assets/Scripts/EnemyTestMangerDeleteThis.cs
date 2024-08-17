@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyTestMangerDeleteThis : MonoBehaviour
+public class EnemyTestMangerDeleteThis : EnemyBase
 {
-    [SerializeField] private BezierMoveAlongPath movementScript;
-
     void Start()
     {
-        movementScript.StartMoving();
+        _pathMover.StartMoving(_paths, _pathSpeedModifier, gameObject);
     }
 }

@@ -4,40 +4,36 @@ using UnityEngine;
 
 public class BezierMoveAlongPath : MonoBehaviour
 {
-    [SerializeField] private Transform[] _paths;
-    [SerializeField] private float _speedModifier = 0.5f;
-
-
-    public void StartMoving() {
-        StartCoroutine(MoveAlongAllPaths());
+    public void StartMoving(Transform[] paths, float speed, GameObject target) {
+        StartCoroutine(MoveAlongAllPaths(paths, speed, target));
     }
 
-    private IEnumerator MoveAlongAllPaths() {
-        for (int i = 0; i < _paths.Length; i++)
+    private IEnumerator MoveAlongAllPaths(Transform[] paths, float speed, GameObject target) {
+        foreach (Transform path in paths)
         {
-            yield return StartCoroutine(MoveAlongPath(i));
+            yield return StartCoroutine(MoveAlongPath(path, speed, target));
         }
     }
 
-    private IEnumerator MoveAlongPath(int pathID) {
-        Vector2 p0 = _paths[pathID].GetChild(0).position;
-        Vector2 p1 = _paths[pathID].GetChild(1).position;
-        Vector2 p2 = _paths[pathID].GetChild(2).position;
-        Vector2 p3 = _paths[pathID].GetChild(3).position;
+    private IEnumerator MoveAlongPath(Transform path, float speed, GameObject target) {
+        Vector2 p0 = path.GetChild(0).position;
+        Vector2 p1 = path.GetChild(1).position;
+        Vector2 p2 = path.GetChild(2).position;
+        Vector2 p3 = path.GetChild(3).position;
 
         float t = 0f;
         Vector2 newPos;
 
         while (t < 1)
         {
-            t += Time.deltaTime * _speedModifier;
+            t += Time.deltaTime * speed;
 
             newPos = Mathf.Pow(1 - t, 3) * p0 +
             3 * Mathf.Pow(1 - t, 2) * t * p1 +
             3 * (1 - t) * Mathf.Pow(t, 2) * p2 + 
             Mathf.Pow(t, 3) * p3;
 
-            transform.position = newPos;
+            target.transform.position = newPos;
             yield return new WaitForEndOfFrame();
         }
 
