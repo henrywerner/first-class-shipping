@@ -7,13 +7,14 @@ public abstract class AbsAttachable : MonoBehaviour
     [SerializeField] Transform ConnectingNode;
     [SerializeField] Transform RecievingNode;
     public AbsAttachable NextAttachment = null;
+    public AbsAttachable ParrentAttachment = null;
 
-    public void AttachTo(AbsAttachable parentAttachment)
+    public void AttachTo(AbsAttachable argParentAttachment)
     {
-        this.transform.rotation = parentAttachment.transform.rotation;
-        this.transform.position = parentAttachment.RecievingNode.position + (this.transform.position - ConnectingNode.transform.position);
-        parentAttachment.NextAttachment = this;
-        this.NextAttachment = null;
+        this.transform.rotation = argParentAttachment.transform.rotation;
+        this.transform.position = argParentAttachment.RecievingNode.position + (this.transform.position - ConnectingNode.transform.position);
+        argParentAttachment.NextAttachment = this;
+        ParrentAttachment = argParentAttachment;
     }
 
     virtual public void Detach()
@@ -21,8 +22,10 @@ public abstract class AbsAttachable : MonoBehaviour
         // something about this isn't working
         // TODO
         this.transform.parent = null;
+        ParrentAttachment = null;
         if (NextAttachment != null)
         {
+            NextAttachment = null;
             NextAttachment.Detach();
         }
     }

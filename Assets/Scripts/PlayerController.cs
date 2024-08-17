@@ -25,7 +25,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Debug") != 0)
         {
             Debug.Log("detaching");
-            ConnectionNodes[0].GetComponent<RootAttachable>().Detach();
+            foreach (var node in ConnectionNodes)
+            {
+                node.gameObject.GetComponent<RootAttachable>().Detach();
+            }
         }
     }
 
@@ -46,9 +49,12 @@ public class PlayerController : MonoBehaviour
 
     public void AttachComponent(AbsAttachable argComponent)
     {
-        AbsAttachable attachPoint = GetClosestRootNode(argComponent.gameObject).FindTail();
-        argComponent.AttachTo(attachPoint);
-        argComponent.transform.parent = this.transform;
+        if (argComponent.ParrentAttachment == null)
+        {
+            AbsAttachable attachPoint = GetClosestRootNode(argComponent.gameObject).FindTail();
+            argComponent.AttachTo(attachPoint);
+            argComponent.transform.parent = this.transform;
+        }
     }
 
     private RootAttachable GetClosestRootNode(GameObject Obj)
