@@ -23,11 +23,21 @@ public abstract class AbsAttachable : MonoBehaviour
         // TODO
         this.transform.parent = null;
         ParrentAttachment = null;
+
+        BoxCollider2D collider = this.gameObject.GetComponent<BoxCollider2D>();
+        collider.enabled = false;
+        StartCoroutine(ReEnableCollions(collider, 0.5f));
         if (NextAttachment != null)
         {
-            NextAttachment = null;
             NextAttachment.Detach();
+            NextAttachment = null;
         }
+    }
+    
+    IEnumerator ReEnableCollions(BoxCollider2D argCollider, float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        argCollider.enabled = true;
     }
 
     public AbsAttachable FindTail()
