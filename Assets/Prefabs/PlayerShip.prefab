@@ -327,11 +327,7 @@ MonoBehaviour:
   - {fileID: 6172663186340366011}
   - {fileID: 4816685413628899051}
   - {fileID: 3960038706049738728}
-  ConnectionNodeTop: {fileID: 2267186754774481336}
-  ConnectionNodeBottom: {fileID: 3960038706049738728}
-  ConnectionNodeLeft: {fileID: 4816685413628899051}
-  ConnectionNodeRight: {fileID: 6172663186340366011}
-  _moveSpeed: 0.25
+  _moveSpeed: 0.12
 --- !u!114 &3733430896664442156
 MonoBehaviour:
   m_ObjectHideFlags: 0

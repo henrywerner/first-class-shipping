@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject[] ConnectionNodes;
 
-    [SerializeField] float _moveSpeed = .25f;
+    [SerializeField] float _moveSpeed = .1f;
     public float MoveSpeed
     {
         get => _moveSpeed;
@@ -32,10 +32,14 @@ public class PlayerController : MonoBehaviour
     public void Move()
     {
         // calculate movement amount
-        float verticalMoveThisFrame = Input.GetAxis("Vertical") * _moveSpeed;
-        float horizontalMoveThisFrame = Input.GetAxis("Horizontal") * _moveSpeed;
+        float verticalMoveThisFrame = Input.GetAxisRaw("Vertical") * _moveSpeed;
+        //Debug.Log($"Vertical: {Input.GetAxisRaw("Vertical")}");
+        float horizontalMoveThisFrame = Input.GetAxisRaw("Horizontal") * _moveSpeed;
+        //Debug.Log($"Horizontal: {Input.GetAxisRaw("Horizontal")}");
         // move player
-        this.transform.position = this.transform.position + (transform.up * verticalMoveThisFrame) + (transform.right * horizontalMoveThisFrame);
+        //this.transform.position = this.transform.position + (transform.up * verticalMoveThisFrame) + (transform.right * horizontalMoveThisFrame);
+        Vector3 moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        transform.Translate(moveDirection.normalized * _moveSpeed);
     }
 
     public void FireGuns()
