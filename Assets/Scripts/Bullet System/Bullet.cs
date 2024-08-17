@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _rb.gravityScale = 0;
+        Physics2D.IgnoreLayerCollision(6, 6); // Ignore collisions with other bullets   
     }
 
     private void FixedUpdate()
@@ -32,7 +33,22 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+
         IDamageable obj = other.gameObject.GetComponent<IDamageable>();
+
+        if (obj == null) { // if obj isn't damageable
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>());
+            return;
+        }
+        else if (other.gameObject.CompareTag("Enemy") && isEnemy) {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>());
+            return;
+        }
+        else if (other.gameObject.CompareTag("Friendly") && !isEnemy) {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>());
+            return;
+        }
+
         obj?.Damage(_damage); // all enemy bullets always 
         Feedback(); // spawn particles and sfx
         gameObject.SetActive(false);
