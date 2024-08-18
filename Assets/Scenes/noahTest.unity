@@ -502,10 +502,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
-    - target: {fileID: 4746277802477954699, guid: 3e6879e47a6cd694288ca90b97409596, type: 3}
-      propertyPath: _bullet
-      value: 
-      objectReference: {fileID: 7346476394007590631, guid: 23a25cf049a0ae544b5632c6425bfd31, type: 3}
     - target: {fileID: 7986548631084027962, guid: 3e6879e47a6cd694288ca90b97409596, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5289
@@ -561,11 +557,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3977240237641262803, guid: e9f26eb004d675f49a74e3c50d87642a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.24076997
+      value: -1.3
       objectReference: {fileID: 0}
     - target: {fileID: 3977240237641262803, guid: e9f26eb004d675f49a74e3c50d87642a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.77701306
+      value: -1.81
       objectReference: {fileID: 0}
     - target: {fileID: 3977240237641262803, guid: e9f26eb004d675f49a74e3c50d87642a, type: 3}
       propertyPath: m_LocalPosition.z
