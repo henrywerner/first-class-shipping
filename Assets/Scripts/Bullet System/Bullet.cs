@@ -41,24 +41,25 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-
-        IDamageable obj = other.gameObject.GetComponent<IDamageable>();
+        
+        IDamageable obj = other.collider.gameObject.GetComponent<IDamageable>();
+        Debug.Log($"{other.collider.gameObject} hit bullet");
 
         if (obj == null) { // if obj isn't damageable
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.collider.gameObject.GetComponent<Collider2D>());
             return;
         }
-        else if (other.gameObject.CompareTag("Enemy") && isEnemy) {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>());
+        else if (other.collider.gameObject.CompareTag("Enemy") && isEnemy) {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.collider.gameObject.GetComponent<Collider2D>());
             return;
         }
-        else if (other.gameObject.CompareTag("Friendly") && !isEnemy) {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>());
+        else if (other.collider.gameObject.CompareTag("Friendly") && !isEnemy) {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.collider.gameObject.GetComponent<Collider2D>());
             return;
         }
-        else if ((other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Gun")) && !isEnemy)
+        else if ((other.collider.gameObject.CompareTag("Player") || other.collider.gameObject.CompareTag("Gun")) && !isEnemy)
         {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.collider.gameObject.GetComponent<Collider2D>());
             return;
         }
 
@@ -70,7 +71,7 @@ public class Bullet : MonoBehaviour
     private void Feedback()
     {
         // TODO: add hit FX here.
-        
+ 
         Destroy(gameObject);
     }
 

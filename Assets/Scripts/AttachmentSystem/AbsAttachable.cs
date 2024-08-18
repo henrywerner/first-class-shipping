@@ -36,14 +36,17 @@ public abstract class AbsAttachable : MonoBehaviour
 
     public void DetachWithSpeed(Vector2 argForce)
     {
-        Detach();
-        this.gameObject.AddComponent<Rigidbody2D>();
-        Rigidbody2D rb2d = this.gameObject.GetComponent<Rigidbody2D>();
-        rb2d.isKinematic = false;
-        rb2d.gravityScale = 0;
-        float random = Random.Range(0f, 260f);
-        rb2d.AddForce(argForce);
-        rb2d.AddTorque(Random.Range(4, 8), ForceMode2D.Impulse);
+        if (ParrentAttachment != null) //already detatched
+        {
+            Detach();
+            this.gameObject.AddComponent<Rigidbody2D>();
+            Rigidbody2D rb2d = this.gameObject.GetComponent<Rigidbody2D>();
+            rb2d.isKinematic = false;
+            rb2d.gravityScale = 0;
+            float random = Random.Range(0f, 260f);
+            rb2d.AddForce(argForce);
+            rb2d.AddTorque(Random.Range(4, 8), ForceMode2D.Impulse);
+        }
     }
 
     virtual public void Detach()
