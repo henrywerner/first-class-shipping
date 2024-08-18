@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
             DodgeRoll();
         }
 
+        /*
         if (Input.GetAxis("Debug") != 0)
         {
             Debug.Log("detaching all");
@@ -45,9 +46,10 @@ public class PlayerController : MonoBehaviour
                 node.gameObject.GetComponent<RootAttachable>().Detach();
             }
         }
+        */
 
         // TEMP - noah
-        if (Input.GetAxis("Jump") != 0)
+        if (Input.GetAxis("Debug") != 0)
         {
             Debug.Log("Detaching single gun");
             AbsAttachable throwingGun = GetRandAttachedTail();
