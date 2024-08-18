@@ -9,16 +9,13 @@ public abstract class AbsAttachable : MonoBehaviour
     public AbsAttachable NextAttachment = null;
     public AbsAttachable ParrentAttachment = null;
 
-    Rigidbody2D _rb2d = null;
-
-    private void Awake()
-    {
-        _rb2d = GetComponent<Rigidbody2D>();
-    }
-
     public void AttachTo(AbsAttachable argParentAttachment)
     {
-        _rb2d.isKinematic = true;
+        Rigidbody2D rb2d = this.gameObject.GetComponent<Rigidbody2D>();
+        if (rb2d != null)
+        {
+            Destroy(rb2d);
+        }
         this.transform.rotation = argParentAttachment.transform.rotation;
         this.transform.position = argParentAttachment.RecievingNode.position + (this.transform.position - ConnectingNode.transform.position);
         argParentAttachment.NextAttachment = this;
@@ -27,12 +24,20 @@ public abstract class AbsAttachable : MonoBehaviour
 
     public void DetachWithSpeed()
     {
-        Detach();
-        _rb2d.isKinematic = false;
         float random = Random.Range(0f, 260f);
-        _rb2d.AddForce(new Vector2(Mathf.Cos(random), Mathf.Sin(random)) * 100);
-        _rb2d.AddTorque(Random.Range(2, 6), ForceMode2D.Impulse);
+        DetachWithSpeed(new Vector2(Mathf.Cos(random), Mathf.Sin(random)) * 100);
+    }
 
+    public void DetachWithSpeed(Vector2 argForce)
+    {
+        Detach();
+        this.gameObject.AddComponent<Rigidbody2D>();
+        Rigidbody2D rb2d = this.gameObject.GetComponent<Rigidbody2D>();
+        rb2d.isKinematic = false;
+        rb2d.gravityScale = 0;
+        float random = Random.Range(0f, 260f);
+        rb2d.AddForce(argForce);
+        rb2d.AddTorque(Random.Range(4, 10), ForceMode2D.Impulse);
     }
 
     virtual public void Detach()
@@ -73,5 +78,10 @@ public abstract class AbsAttachable : MonoBehaviour
             Debug.Log("Collided with " + other.gameObject.name);
             other.gameObject.GetComponent<PlayerController>().AttachComponent(this);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("TEST");
     }
 }
