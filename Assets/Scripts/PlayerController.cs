@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float _dodgeBoostTime = .4f;
     [SerializeField] float _dodgeCoolDown = 1f;
     [SerializeField] float _dodgeSpeed = .5f;
+    [SerializeField] GameObject _dodgeSprite;
 
     Vector3 _moveDirection;
     Vector3 _dodgeDirection;
@@ -106,13 +107,14 @@ public class PlayerController : MonoBehaviour
         // Check not on cool down
         if (!_isDodging && Time.time >= _lastDodgeTime + _dodgeCoolDown)
         {
+            // Require a part to use dodge
             if (DetatchSingle()) //Later might need to be more or none.
             {
                 Debug.Log("Dodge this!");
-                // Require a part to use dodge
                 // Set invul
                 _healthSystem.SetTempInvul(_dodgeInvulTime);
                 // Show dodge visuals and play sfx
+                _dodgeSprite?.SetActive(true);
                 // Start Coroutine to count frames/time till dodge roll end. Pass in frames
                 StartCoroutine(DodgeSpeedCoroutine(_dodgeBoostTime));
             }
@@ -126,6 +128,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         _lastDodgeTime = Time.time;
         _isDodging = false;
+        _dodgeSprite?.SetActive(false);
     }
 
     private RootAttachable GetClosestRootNode(GameObject Obj)
