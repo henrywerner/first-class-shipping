@@ -80,12 +80,25 @@ public class PlayerController : MonoBehaviour
     {
         if (_isDodging)
         {
-            transform.Translate(_dodgeDirection.normalized * _dodgeSpeed);
+            MoveInBounds(_dodgeDirection.normalized * _dodgeSpeed);
         }
         else // default to regular movement
         {
-            transform.Translate(_moveDirection.normalized * _moveSpeed);
+            MoveInBounds(_moveDirection.normalized * _moveSpeed);
         }
+    }
+
+    private void MoveInBounds(Vector3 desiredMovementVector)
+    {
+        Vector3 cameraBounds = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0));
+        float boundsX = cameraBounds.x - (transform.lossyScale.x * 0.5f);
+        float boundsY = cameraBounds.y - (transform.lossyScale.y * 0.5f);
+
+        Vector3 clampedNewPosition = Vector3.zero;
+        clampedNewPosition.x = Mathf.Clamp(desiredMovementVector.x + transform.position.x, -boundsX, boundsX);
+        clampedNewPosition.y = Mathf.Clamp(desiredMovementVector.y + transform.position.y, -boundsY, boundsY);
+
+        transform.position = clampedNewPosition;
     }
 
     public void FireGuns()
