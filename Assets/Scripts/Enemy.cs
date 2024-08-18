@@ -24,5 +24,11 @@ public abstract class Enemy : MonoBehaviour
     public virtual void StartMoving() {
         _pathMover.StartMoving(_paths, _pathSpeedModifier, gameObject);
     }
+
+    // Remove without killing, as killing drops loot
+    protected virtual void Remove()
+    {
+        gameObject.SetActive(false);
+    }
     
 }

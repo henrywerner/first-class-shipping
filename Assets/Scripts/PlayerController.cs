@@ -99,7 +99,6 @@ public class PlayerController : MonoBehaviour
 
     public void FireGuns()
     {
-        // TODO
         foreach (PlayerBasicGun gun in _gunList)
         {
             gun.Fire();
