@@ -31,4 +31,11 @@ public class EventManager : MonoBehaviour
     {
         OnEnemyKilled?.Invoke();
     }
+
+    public event Action<float, float> OnScreenShake;
+
+    public void ShakeScreen(float duration, float magnitude)
+    {
+        OnScreenShake?.Invoke(duration, magnitude);
+    }
 }

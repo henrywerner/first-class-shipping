@@ -121,6 +121,8 @@ MonoBehaviour:
   _pathSpeedModifier: 0.5
   _gun: {fileID: 254740358063986995}
   _parentObject: {fileID: 9180191369230775973}
+  ScreenShakeDuration: 0.1
+  ScreenShakeMagnitude: 0.1
 --- !u!114 &3846470686131449857
 MonoBehaviour:
   m_ObjectHideFlags: 0
