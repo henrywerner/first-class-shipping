@@ -81,16 +81,11 @@ public abstract class AbsAttachable : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Collided with " + other.gameObject.name);
+        // Debug.Log("Collided with " + other.gameObject.name);
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Collided with " + other.gameObject.name);
+            //Debug.Log("Collided with " + other.gameObject.name);
             other.gameObject.GetComponent<PlayerController>().AttachComponent(this);
         }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("TEST");
     }
 }
