@@ -6,24 +6,33 @@ public class FsmLevel01 : StateMachine
 {
     public Level01Wave01 wave01 { get; private set; }
     public Level01Wave02 wave02 { get; private set; }
+    public Level01LevelEnd levelEnd { get; private set; }
 
     private Queue<IState> waves = new Queue<IState>();
 
-    [SerializeField] private Enemy[] wave01Enemies;
-    [SerializeField] private Enemy[] wave02Enemies;
-    [SerializeField] private Enemy[] wave03Enemies;
+    [SerializeField] public GameObject[] waveContainers;
+
+
+    private Enemy[] wave01Enemies, wave02Enemies, wave03Enemies;
 
     void Awake()
     {
+        wave01Enemies = waveContainers[0].GetComponentsInChildren<Enemy>();
+        wave02Enemies = waveContainers[1].GetComponentsInChildren<Enemy>();
+        // wave03Enemies = waveContainers[2].GetComponentsInChildren<Enemy>();
+
         wave01 = new Level01Wave01(this, wave01Enemies);
-        wave02 = new Level01Wave02(this);
+        wave02 = new Level01Wave02(this, wave02Enemies);
+        levelEnd = new Level01LevelEnd(this);
+
         waves.Enqueue(wave01);
         waves.Enqueue(wave02);
+        waves.Enqueue(levelEnd);
     }
 
     void Start()
     {
-        ChangeState(wave01);
+        ChangeState(waves.Dequeue());
     }
 
     public void StartWaveAfterSeconds(float delay) {
@@ -32,9 +41,8 @@ public class FsmLevel01 : StateMachine
 
     protected IEnumerator StartWaveAfterSecondsCoroutine(float delay) {
         // NOTE: THIS WILL BREAK IF WE ADD FUNCTIONALITY FOR ENDING THE WAVE WHEN ALL ARE DEAD
-        yield return new WaitForSecondsRealtime(delay);
-        waves.Dequeue();
-        ChangeState(waves.Peek());
+        yield return new WaitForSecondsRealtime(delay);   
+        ChangeState(waves.Dequeue());
     }
 
     public void SpawnEnemyAfterSeconds(Enemy enemy, float delay) {

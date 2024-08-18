@@ -12,6 +12,11 @@ public abstract class AbsAttachable : MonoBehaviour
 
     public void AttachTo(AbsAttachable argParentAttachment)
     {
+        PickupDrifting drift = this.GetComponent<PickupDrifting>();
+        if (drift != null)
+        {
+            Destroy(drift);
+        }
         Rigidbody2D rb2d = this.gameObject.GetComponent<Rigidbody2D>();
         if (rb2d != null)
         {
