@@ -31,68 +31,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7986548631084027962}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &495277134235535069
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6579194208088110098}
-  m_Layer: 0
-  m_Name: BarrelNode2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6579194208088110098
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495277134235535069}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2544976361793394366}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2736565551635877761
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3910157622056501095}
-  m_Layer: 0
-  m_Name: BarrelNode1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3910157622056501095
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2736565551635877761}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.08715578, w: 0.9961947}
-  m_LocalPosition: {x: -0.3, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2544976361793394366}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10}
 --- !u!1 &3451378334046952418
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,10 +59,7 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3910157622056501095}
-  - {fileID: 6579194208088110098}
-  - {fileID: 5672694498677905056}
+  m_Children: []
   m_Father: {fileID: 7986548631084027962}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &3453984091919103747
@@ -139,11 +74,11 @@ GameObject:
   - component: {fileID: 1025776150103686930}
   - component: {fileID: 339534400307949712}
   - component: {fileID: 1981192427717224342}
-  - component: {fileID: 4746277802477954699}
   - component: {fileID: 4107244958943256088}
-  - component: {fileID: 8984142596251902509}
+  - component: {fileID: 3523588524896031810}
+  - component: {fileID: 4721974378849906098}
   m_Layer: 0
-  m_Name: TridentGun
+  m_Name: BeamGun
   m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +94,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7630353, y: 0.37120605, z: 1}
+  m_LocalScale: {x: 0.55, y: 0.64, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2282608278392968830}
@@ -209,7 +144,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.008881774, g: 0.4393531, b: 0.12219036, a: 1}
+  m_Color: {r: 0.19215684, g: 0.4560109, b: 0.6666667, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -281,24 +216,6 @@ MonoBehaviour:
   NextAttachment: {fileID: 0}
   ParrentAttachment: {fileID: 0}
   detatchCooldown: 0.5
---- !u!114 &4746277802477954699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3453984091919103747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e72b60bacfaf1b46971b4d9a4f83130, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bullet: {fileID: 7346476394007590631, guid: 6c4dea4df1d8c3c4da83f8c50543f800, type: 3}
-  _nodes:
-  - {fileID: 2736565551635877761}
-  - {fileID: 495277134235535069}
-  - {fileID: 5452063110109507369}
-  CooldownLength: 0.6
 --- !u!114 &4107244958943256088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DriftVelocity: 0.05
---- !u!114 &8984142596251902509
+--- !u!114 &3523588524896031810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -324,37 +241,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a8f1bdd77551b448cafd6450aee6d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &5452063110109507369
-GameObject:
+--- !u!114 &4721974378849906098
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5672694498677905056}
-  m_Layer: 0
-  m_Name: BarrelNode3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5672694498677905056
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5452063110109507369}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.08715578, w: 0.9961947}
-  m_LocalPosition: {x: 0.3, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2544976361793394366}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10}
+  m_GameObject: {fileID: 3453984091919103747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e065f62e5f9f644a5d0e4255771036, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bullet: {fileID: 7723282652460130139, guid: 74cf7b09f5d432745b0691fb80160d1f, type: 3}
+  _nodes:
+  - {fileID: 3451378334046952418}
+  BeamDuration: 3
+  BeamCoolDown: 3
+  BeamWidth: 0.64
+  BeamLerpTime: 60
 --- !u!1 &8737262933656614885
 GameObject:
   m_ObjectHideFlags: 0

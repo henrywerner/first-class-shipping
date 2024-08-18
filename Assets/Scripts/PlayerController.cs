@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     
 
     [SerializeField] GameObject[] ConnectionNodes;
-    private List<PlayerBasicGun> _gunList = new List<PlayerBasicGun>();
+    private List<Gun> _gunList = new List<Gun>();
 
     [SerializeField] float _moveSpeed = .1f;
     public float MoveSpeed
@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        AbsAttachable.OnGunAttachmentUpdate += UpdateGunList;
+        AbsAttachable.OnAttachmentsUpdate += UpdateGunList;
 
         _moveDirection = Vector3.zero;
         _healthSystem = GetComponent<HealthSystem>();
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDisable()
     {
-        AbsAttachable.OnGunAttachmentUpdate -= UpdateGunList;
+        AbsAttachable.OnAttachmentsUpdate -= UpdateGunList;
     }
 
     private void FixedUpdate()
@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
 
     public void FireGuns()
     {
-        foreach (PlayerBasicGun gun in _gunList)
+        foreach (Gun gun in _gunList)
         {
             gun.Fire();
         }
@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (currentNode.gameObject.GetComponent<GunAttachable>() != null)
                 {
-                    _gunList.Add(currentNode.GetComponent<PlayerBasicGun>());
+                    _gunList.Add(currentNode.GetComponent<Gun>());
                 }
                 currentNode = currentNode.NextAttachment;
             }
