@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(HealthSystem))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject[] ConnectionNodes;
@@ -14,12 +15,30 @@ public class PlayerController : MonoBehaviour
         set => _moveSpeed = value;
     }
 
+    // Dodge
+    [SerializeField] float _dodgeInvulTime = .2f;
+    [SerializeField] float _dodgeBoostTime = .4f;
+    [SerializeField] float _dodgeCoolDown = 1f;
+    [SerializeField] float _dodgeSpeed = .5f;
+    [SerializeField] GameObject _dodgeSprite;
+
     Vector3 _moveDirection;
+    Vector3 _dodgeDirection;
+    HealthSystem _healthSystem;
+    float _lastDodgeTime;
+    bool _isDodging;
+
+    private void Awake()
+    {
+        _moveDirection = Vector3.zero;
+        _healthSystem = GetComponent<HealthSystem>();
+        _isDodging = false;
+    }
 
     private void FixedUpdate()
     {
-        Move();
         ProcessInputs();
+        Move();
     }
 
     private void ProcessInputs()
@@ -27,12 +46,12 @@ public class PlayerController : MonoBehaviour
         // calculate movement amount
         _moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        if (Input.GetAxis("Fire1") >= 0)
+        if (Input.GetAxis("Fire1") > 0)
         {
             FireGuns();
         }
 
-        if (Input.GetAxis("Dodge") >= 0)
+        if (Input.GetAxis("Dodge") > 0)
         {
             DodgeRoll();
         }
@@ -51,31 +70,26 @@ public class PlayerController : MonoBehaviour
         // TEMP - noah
         if (Input.GetAxis("Debug") != 0)
         {
-            Debug.Log("Detaching single gun");
-            AbsAttachable throwingGun = GetRandAttachedTail();
-            if (throwingGun != null)
-            {
-                throwingGun.DetachWithSpeed();
-            }
+            DetatchSingle();
         }
     }
 
     public void Move()
     {
-        transform.Translate(_moveDirection.normalized * _moveSpeed);
+        if (_isDodging)
+        {
+            transform.Translate(_dodgeDirection.normalized * _dodgeSpeed);
+        }
+        else // default to regular movement
+        {
+            transform.Translate(_moveDirection.normalized * _moveSpeed);
+        }
     }
 
     public void FireGuns()
     {
         // TODO
         Debug.Log("Fire player guns");
-    }
-
-    private void DodgeRoll()
-    {
-        // Set invul
-        // Show dodge visuals and play sfx
-        // Start Coroutine to count frames/time till dodge roll end. Pass in frames
     }
 
     public void AttachComponent(AbsAttachable argComponent)
@@ -86,6 +100,35 @@ public class PlayerController : MonoBehaviour
             argComponent.AttachTo(attachPoint);
             argComponent.transform.parent = this.transform;
         }
+    }
+
+    private void DodgeRoll()
+    {
+        // Check not on cool down
+        if (!_isDodging && Time.time >= _lastDodgeTime + _dodgeCoolDown)
+        {
+            // Require a part to use dodge
+            if (DetatchSingle()) //Later might need to be more or none.
+            {
+                Debug.Log("Dodge this!");
+                // Set invul
+                _healthSystem.SetTempInvul(_dodgeInvulTime);
+                // Show dodge visuals and play sfx
+                _dodgeSprite?.SetActive(true);
+                // Start Coroutine to count frames/time till dodge roll end. Pass in frames
+                StartCoroutine(DodgeSpeedCoroutine(_dodgeBoostTime));
+            }
+        }
+    }
+
+    private IEnumerator DodgeSpeedCoroutine(float seconds)
+    {
+        _isDodging = true;
+        _dodgeDirection = _moveDirection;
+        yield return new WaitForSeconds(seconds);
+        _lastDodgeTime = Time.time;
+        _isDodging = false;
+        _dodgeSprite?.SetActive(false);
     }
 
     private RootAttachable GetClosestRootNode(GameObject Obj)
@@ -112,6 +155,20 @@ public class PlayerController : MonoBehaviour
             Debug.LogWarning("Could not find nearest root.");
             return null;
         }
+    }
+
+    private bool DetatchSingle()
+    {
+        Debug.Log("Detaching single gun");
+        bool detachedSuccess = false;
+        AbsAttachable throwingGun = GetRandAttachedTail();
+        if (throwingGun != null)
+        {
+            throwingGun.DetachWithSpeed();
+            detachedSuccess = true;
+        }
+
+        return detachedSuccess;
     }
 
     private AbsAttachable GetRandAttachedTail()
