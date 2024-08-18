@@ -9,7 +9,7 @@ public abstract class Gun : MonoBehaviour, IShootable
     [SerializeField] protected GameObject[] _nodes;
     [SerializeField] protected GameObject shootSFXObj;
 
-    private bool _isOnCooldown = false;
+    protected bool _isOnCooldown = false;
 
     // Fire should be used by the player to actually fire the weapons
     public abstract void Fire();
