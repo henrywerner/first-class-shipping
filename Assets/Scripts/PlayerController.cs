@@ -37,12 +37,25 @@ public class PlayerController : MonoBehaviour
             DodgeRoll();
         }
 
+        /*
         if (Input.GetAxis("Debug") != 0)
         {
-            Debug.Log("detaching");
+            Debug.Log("detaching all");
             foreach (var node in ConnectionNodes)
             {
                 node.gameObject.GetComponent<RootAttachable>().Detach();
+            }
+        }
+        */
+
+        // TEMP - noah
+        if (Input.GetAxis("Debug") != 0)
+        {
+            Debug.Log("Detaching single gun");
+            AbsAttachable throwingGun = GetRandAttachedTail();
+            if (throwingGun != null)
+            {
+                throwingGun.DetachWithSpeed();
             }
         }
     }
@@ -97,6 +110,26 @@ public class PlayerController : MonoBehaviour
         else
         {
             Debug.LogWarning("Could not find nearest root.");
+            return null;
+        }
+    }
+
+    private AbsAttachable GetRandAttachedTail()
+    {
+        List< AbsAttachable> roots = new List<AbsAttachable> ();
+        foreach (GameObject node in ConnectionNodes)
+        {
+            if (node.GetComponent<RootAttachable>().NextAttachment != null)
+            {
+                roots.Add(node.GetComponent<RootAttachable>().FindTail());
+            }
+        }
+        if (roots.Count > 0)
+        {
+            return roots[Random.Range(0, roots.Count)];
+        }
+        else
+        {
             return null;
         }
     }

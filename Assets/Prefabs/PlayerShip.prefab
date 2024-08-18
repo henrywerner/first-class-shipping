@@ -48,7 +48,7 @@ GameObject:
   m_Layer: 0
   m_Name: ConnetionTop
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -82,6 +82,7 @@ MonoBehaviour:
   ConnectingNode: {fileID: 8585216654014226783}
   RecievingNode: {fileID: 8585216654014226783}
   NextAttachment: {fileID: 0}
+  ParrentAttachment: {fileID: 0}
 --- !u!1 &3960038706049738728
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +96,7 @@ GameObject:
   m_Layer: 0
   m_Name: ConnetionBottom
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -129,6 +130,7 @@ MonoBehaviour:
   ConnectingNode: {fileID: 8386470227398013344}
   RecievingNode: {fileID: 8386470227398013344}
   NextAttachment: {fileID: 0}
+  ParrentAttachment: {fileID: 0}
 --- !u!1 &4816685413628899051
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +144,7 @@ GameObject:
   m_Layer: 0
   m_Name: ConnetionLeft
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -176,6 +178,7 @@ MonoBehaviour:
   ConnectingNode: {fileID: 7301131513663382896}
   RecievingNode: {fileID: 7301131513663382896}
   NextAttachment: {fileID: 0}
+  ParrentAttachment: {fileID: 0}
 --- !u!1 &5276891342043836490
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +385,7 @@ GameObject:
   m_Layer: 0
   m_Name: ConnetionRight
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -416,3 +419,4 @@ MonoBehaviour:
   ConnectingNode: {fileID: 1382911861244491931}
   RecievingNode: {fileID: 1382911861244491931}
   NextAttachment: {fileID: 0}
+  ParrentAttachment: {fileID: 0}

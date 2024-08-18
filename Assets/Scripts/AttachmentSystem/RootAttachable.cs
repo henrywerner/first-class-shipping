@@ -9,6 +9,7 @@ public class RootAttachable : AbsAttachable
         if (NextAttachment != null)
         {
             NextAttachment.Detach();
+            NextAttachment = null;
         }
     }
 }
