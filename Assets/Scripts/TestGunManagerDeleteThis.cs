@@ -5,7 +5,7 @@ using UnityEngine;
 public class TestGunManagerDeleteThis : MonoBehaviour
 {
     
-    [SerializeField] private PlayerTestGun _playerGun;
+    [SerializeField] private PlayerBasicGun _playerGun;
 
     [SerializeField] private EnemyGun _enemyGun;
 

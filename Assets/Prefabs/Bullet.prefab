@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a2d321e53a984e8021e96108ee3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 0.1
+  MoveSpeed: 0.2
   _damage: 1
   isEnemy: 1
   _despawnTime: 3
