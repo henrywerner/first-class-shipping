@@ -14,6 +14,10 @@ public abstract class Enemy : MonoBehaviour
     [Header("Parent")]
     [SerializeField] protected GameObject _parentObject;
 
+    [Header("Screen Shake on Death")]
+    [SerializeField] public float ScreenShakeDuration;
+    [SerializeField] public float ScreenShakeMagnitude;
+
 
     protected BezierMoveAlongPath _pathMover;
 
