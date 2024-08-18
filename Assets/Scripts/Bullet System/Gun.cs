@@ -7,6 +7,7 @@ public abstract class Gun : MonoBehaviour, IShootable
     [SerializeField] protected GameObject _bullet;
     
     [SerializeField] protected GameObject[] _nodes;
+    [SerializeField] protected GameObject shootSFXObj;
 
     private bool _isOnCooldown = false;
 
@@ -18,6 +19,7 @@ public abstract class Gun : MonoBehaviour, IShootable
         {
             GameObject bullet = Instantiate(_bullet, node.transform.position, node.transform.rotation);
         }
+        AudioController.controller.PlaySFX(shootSFXObj, transform.position);
     }
 
     public virtual void ShootWithCooldown(float rate)

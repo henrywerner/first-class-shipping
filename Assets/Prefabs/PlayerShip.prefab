@@ -83,6 +83,7 @@ MonoBehaviour:
   RecievingNode: {fileID: 8585216654014226783}
   NextAttachment: {fileID: 0}
   ParrentAttachment: {fileID: 0}
+  detatchCooldown: 0.5
 --- !u!1 &3158165487683021018
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +216,7 @@ MonoBehaviour:
   RecievingNode: {fileID: 8386470227398013344}
   NextAttachment: {fileID: 0}
   ParrentAttachment: {fileID: 0}
+  detatchCooldown: 0.5
 --- !u!1 &4816685413628899051
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +265,7 @@ MonoBehaviour:
   RecievingNode: {fileID: 7301131513663382896}
   NextAttachment: {fileID: 0}
   ParrentAttachment: {fileID: 0}
+  detatchCooldown: 0.5
 --- !u!1 &5276891342043836490
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +423,9 @@ MonoBehaviour:
   _dodgeBoostTime: 0.1
   _dodgeCoolDown: 1
   _dodgeSpeed: 0.4
+  _dodgeDetachSpeed: 200
   _dodgeSprite: {fileID: 3158165487683021018}
+  _dodgeSFX: {fileID: 4792592769389947601, guid: 8d8ac740b7b807546a233f4e813b27ba, type: 3}
 --- !u!114 &3733430896664442156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,6 +441,8 @@ MonoBehaviour:
   maxHp: 5
   currentHp: 5
   hurtBufferTime: 0.2
+  _hitSFX: {fileID: 0}
+  _deathSFX: {fileID: 4792592769389947601, guid: 899fab919a9808e4c8fe2067f84f0486, type: 3}
 --- !u!50 &6451149039655587727
 Rigidbody2D:
   serializedVersion: 4
@@ -511,3 +518,4 @@ MonoBehaviour:
   RecievingNode: {fileID: 1382911861244491931}
   NextAttachment: {fileID: 0}
   ParrentAttachment: {fileID: 0}
+  detatchCooldown: 0.5

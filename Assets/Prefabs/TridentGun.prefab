@@ -279,6 +279,8 @@ MonoBehaviour:
   RecievingNode: {fileID: 7580204797757058596}
   NextAttachment: {fileID: 0}
   ParrentAttachment: {fileID: 0}
+  detatchCooldown: 0.5
+  attachSFX: {fileID: 4792592769389947601, guid: eb8e61fa0af1ea242b47b3dafd662d16, type: 3}
 --- !u!114 &4746277802477954699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +298,7 @@ MonoBehaviour:
   - {fileID: 2736565551635877761}
   - {fileID: 495277134235535069}
   - {fileID: 5452063110109507369}
+  shootSFXObj: {fileID: 4792592769389947601, guid: 8aa9351e9014bd147a3ad4766fdde4b1, type: 3}
   CooldownLength: 0.6
 --- !u!114 &4107244958943256088
 MonoBehaviour:

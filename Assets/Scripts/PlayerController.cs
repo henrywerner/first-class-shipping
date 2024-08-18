@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float _dodgeSpeed = .5f;
     [SerializeField] float _dodgeDetachSpeed = 100f;
     [SerializeField] GameObject _dodgeSprite;
+    [SerializeField] GameObject _dodgeSFX;
 
     Vector3 _moveDirection;
     Vector3 _dodgeDirection;
@@ -154,6 +155,7 @@ public class PlayerController : MonoBehaviour
                 _healthSystem.SetTempInvul(_dodgeInvulTime);
                 // Show dodge visuals and play sfx
                 _dodgeSprite?.SetActive(true);
+                AudioController.controller.PlaySFX(_dodgeSFX, transform.position);
                 // Start Coroutine to count frames/time till dodge roll end. Pass in frames
                 StartCoroutine(DodgeSpeedCoroutine(_dodgeBoostTime));
             }

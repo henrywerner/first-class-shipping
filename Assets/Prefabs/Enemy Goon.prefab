@@ -203,6 +203,7 @@ MonoBehaviour:
   _bullet: {fileID: 7346476394007590631, guid: f02b16a6a10ee394ca25e64311a82e63, type: 3}
   _nodes:
   - {fileID: 3737329765246377273}
+  shootSFXObj: {fileID: 4792592769389947601, guid: d52159552f413674e963e3a7697f8a28, type: 3}
 --- !u!114 &2769182549550949564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +219,8 @@ MonoBehaviour:
   maxHp: 5
   currentHp: 0
   hurtBufferTime: 0
+  _hitSFX: {fileID: 4792592769389947601, guid: 629c91f34d7b37a48a2b752c961a10f4, type: 3}
+  _deathSFX: {fileID: 4792592769389947601, guid: a352da12388e0d04793f1e98d0de76d5, type: 3}
 --- !u!61 &8054645485590633035
 BoxCollider2D:
   m_ObjectHideFlags: 0
