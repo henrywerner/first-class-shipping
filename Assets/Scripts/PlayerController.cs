@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     
 
     [SerializeField] GameObject[] ConnectionNodes;
+    private Gun _starterGun;
     private List<Gun> _gunList = new List<Gun>();
 
     [SerializeField] float _moveSpeed = .1f;
@@ -36,6 +37,8 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        _starterGun = this.gameObject.GetComponentInChildren<Gun>();
+        _gunList.Add(_starterGun);
         AbsAttachable.OnAttachmentsUpdate += UpdateGunList;
 
         _moveDirection = Vector3.zero;
@@ -116,6 +119,7 @@ public class PlayerController : MonoBehaviour
     private void UpdateGunList()
     {
         _gunList.Clear();
+        _gunList.Add(_starterGun);
 
         foreach (GameObject node in ConnectionNodes)
         {
