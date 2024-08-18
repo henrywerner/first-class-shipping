@@ -19,7 +19,7 @@ public class AudioController : MonoBehaviour
         }
     }
 
-    public void SpawnSFX(GameObject sfxPrefab, Vector3 pos)
+    public void PlaySFX(GameObject sfxPrefab, Vector3 pos)
     {
         if (sfxPrefab != null)
         {

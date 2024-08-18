@@ -19,7 +19,7 @@ public abstract class Gun : MonoBehaviour, IShootable
         {
             GameObject bullet = Instantiate(_bullet, node.transform.position, node.transform.rotation);
         }
-        AudioController.controller.SpawnSFX(shootSFXObj, transform.position);
+        AudioController.controller.PlaySFX(shootSFXObj, transform.position);
     }
 
     public virtual void ShootWithCooldown(float rate)

@@ -10,6 +10,7 @@ public abstract class AbsAttachable : MonoBehaviour
     public AbsAttachable NextAttachment = null;
     public AbsAttachable ParrentAttachment = null;
     [SerializeField] float detatchCooldown = 0.5f;
+    [SerializeField] GameObject attachSFX;
 
     public static event Action OnGunAttachmentUpdate;
 
@@ -34,6 +35,7 @@ public abstract class AbsAttachable : MonoBehaviour
         this.transform.position = argParentAttachment.RecievingNode.position + (this.transform.position - ConnectingNode.transform.position);
         argParentAttachment.NextAttachment = this;
         ParrentAttachment = argParentAttachment;
+        AudioController.controller.PlaySFX(attachSFX, transform.position);
 
         GunAttachmentUpdate();
     }

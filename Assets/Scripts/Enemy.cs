@@ -18,7 +18,6 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] public float ScreenShakeDuration;
     [SerializeField] public float ScreenShakeMagnitude;
 
-
     protected BezierMoveAlongPath _pathMover;
 
     protected void Awake() {

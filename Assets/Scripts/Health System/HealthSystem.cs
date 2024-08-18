@@ -10,6 +10,10 @@ public abstract class HealthSystem : MonoBehaviour, IDamageable
     public bool CanBeHurt { get => _canBeHurt; set => _canBeHurt = value; }
     private bool _canBeHurt;
 
+    [Header("SFX")]
+    [SerializeField] GameObject _hitSFX;
+    [SerializeField] GameObject _deathSFX;
+
     public void Awake()
     {
         currentHp = maxHp;
@@ -18,6 +22,7 @@ public abstract class HealthSystem : MonoBehaviour, IDamageable
 
     public virtual void Kill()
     {
+        AudioController.controller.PlaySFX(_deathSFX, transform.position);
         gameObject.SetActive(false);
     }
 
@@ -26,6 +31,7 @@ public abstract class HealthSystem : MonoBehaviour, IDamageable
         if (_canBeHurt)
         {
             currentHp -= damage;
+            AudioController.controller.PlaySFX(_hitSFX, transform.position);
 
             if (currentHp <= 0)
             {
