@@ -27,9 +27,9 @@ public class AudioController : MonoBehaviour
         }
     }
 
-    public void SetVolume(AudioMixerGroup mixerGroup)
+    public void SetVolume(AudioMixerGroup mixerGroup, float volume)
     {
-        //TODO Implement
-        
+        //I know there is extra math to be done on having the volume adjust properly, but I'll find that later, this will work.
+        mixerGroup.audioMixer.SetFloat("Volume", volume);
     }
 }
