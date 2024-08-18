@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
-{
-    private Rigidbody2D _rb;
-    
+{   
     [Header("Stats")]
     [SerializeField] public float MoveSpeed = 0.3f;
     [SerializeField] private int _damage = 1;
@@ -17,22 +15,20 @@ public class Bullet : MonoBehaviour
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody2D>();
-        _rb.gravityScale = 0;
         Physics2D.IgnoreLayerCollision(6, 6); // Ignore collisions with other bullets  
         _startTime = Time.time;
     }
 
     private void FixedUpdate()
     {
-        Movement(_rb);
+        Movement();
         CheckShouldDespawn();
     }
 
-    protected virtual void Movement(Rigidbody2D rb)
+    protected virtual void Movement()
     {
-        Vector2 moveOffset = transform.up * MoveSpeed;
-        rb.MovePosition(rb.position + moveOffset);
+        Vector3 moveOffset = transform.right * MoveSpeed;
+        transform.position = transform.position + moveOffset;
     }
 
     private void CheckShouldDespawn()
@@ -57,6 +53,11 @@ public class Bullet : MonoBehaviour
             return;
         }
         else if (other.gameObject.CompareTag("Friendly") && !isEnemy) {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>());
+            return;
+        }
+        else if ((other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Gun")) && !isEnemy)
+        {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>());
             return;
         }
