@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Fire player guns");
         foreach (PlayerBasicGun gun in _gunList)
         {
-            gun.ShootWithCooldown(0.2f);
+            gun.Fire();
         }
     }
 

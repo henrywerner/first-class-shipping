@@ -10,6 +10,9 @@ public abstract class Gun : MonoBehaviour, IShootable
 
     private bool _isOnCooldown = false;
 
+    // Fire should be used by the player to actually fire the weapons
+    public abstract void Fire();
+
     public virtual void Shoot() {
         foreach (GameObject node in _nodes)
         {

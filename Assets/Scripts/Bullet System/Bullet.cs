@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour
 
     protected virtual void Movement()
     {
-        Vector3 moveOffset = transform.right * MoveSpeed;
+        Vector3 moveOffset = transform.up * MoveSpeed;
         transform.position = transform.position + moveOffset;
     }
 
