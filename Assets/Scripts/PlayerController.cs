@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject[] ConnectionNodes;
-    private List<PlayerTestGun> _gunList = new List<PlayerTestGun>();
+    private List<PlayerBasicGun> _gunList = new List<PlayerBasicGun>();
 
     [SerializeField] float _moveSpeed = .1f;
     public float MoveSpeed
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
             DodgeRoll();
         }
 
-        /*
+        
         if (Input.GetAxis("Debug") != 0)
         {
             Debug.Log("detaching all");
@@ -66,13 +66,8 @@ public class PlayerController : MonoBehaviour
             {
                 node.gameObject.GetComponent<RootAttachable>().Detach();
             }
-        }
-        */
 
-        // TEMP - noah
-        if (Input.GetAxis("Debug") != 0)
-        {
-            DetatchSingle();
+            UpdateGunList();
         }
     }
 
@@ -92,9 +87,9 @@ public class PlayerController : MonoBehaviour
     {
         // TODO
         Debug.Log("Fire player guns");
-        foreach (PlayerTestGun gun in _gunList)
+        foreach (PlayerBasicGun gun in _gunList)
         {
-            gun.Shoot();
+            gun.ShootWithCooldown(0.2f);
         }
     }
 
@@ -109,7 +104,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (currentNode.gameObject.GetComponent<GunAttachable>() != null)
                 {
-                    _gunList.Add(currentNode.GetComponent<PlayerTestGun>());
+                    _gunList.Add(currentNode.GetComponent<PlayerBasicGun>());
                 }
                 currentNode = currentNode.NextAttachment;
             }
@@ -193,6 +188,8 @@ public class PlayerController : MonoBehaviour
             throwingGun.DetachWithSpeed();
             detachedSuccess = true;
         }
+
+        UpdateGunList();
 
         return detachedSuccess;
     }
