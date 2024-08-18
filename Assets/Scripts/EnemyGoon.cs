@@ -21,6 +21,8 @@ public class EnemyGoon : Enemy
     }
 
     IEnumerator CombatActions() {
+        // Shoot 3 bursts of 3 shots.
+
         yield return StartCoroutine(flightEnterCoroutine);
 
         yield return StartCoroutine(ShootGuns());

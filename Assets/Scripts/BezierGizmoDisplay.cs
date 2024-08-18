@@ -21,7 +21,8 @@ public class BezierGizmoDisplay : MonoBehaviour
             3 * (1 - t) * Mathf.Pow(t, 2) * controlPoints[2].position + 
             Mathf.Pow(t, 3) * controlPoints[3].position;
 
-            Gizmos.DrawSphere(gizmosPos, 0.25f);
+            Gizmos.color = new Color(1f, 1f, 1f, 0.4f);
+            Gizmos.DrawSphere(gizmosPos, 0.15f);
         }
 
         Gizmos.DrawLine(new UnityEngine.Vector2(controlPoints[0].position.x, controlPoints[0].position.y),
