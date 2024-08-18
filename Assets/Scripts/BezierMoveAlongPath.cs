@@ -4,18 +4,39 @@ using UnityEngine;
 
 public class BezierMoveAlongPath : MonoBehaviour
 {
+    public static BezierMoveAlongPath instance;
+
+    void Awake()
+    {
+        // Make this a Singleton
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(this);
+        }
+
+        DontDestroyOnLoad(this);
+    }
+
     public void StartMoving(Transform[] paths, float speed, GameObject target) {
         StartCoroutine(MoveAlongAllPaths(paths, speed, target));
     }
 
-    private IEnumerator MoveAlongAllPaths(Transform[] paths, float speed, GameObject target) {
+    public void MoveAlongSinglePath(Transform path, float speed, GameObject target) {
+        StartCoroutine(MoveAlongPath(path, speed, target));
+    }
+
+    public IEnumerator MoveAlongAllPaths(Transform[] paths, float speed, GameObject target) {
         foreach (Transform path in paths)
         {
             yield return StartCoroutine(MoveAlongPath(path, speed, target));
         }
     }
 
-    private IEnumerator MoveAlongPath(Transform path, float speed, GameObject target) {
+    public IEnumerator MoveAlongPath(Transform path, float speed, GameObject target) {
         Vector2 p0 = path.GetChild(0).position;
         Vector2 p1 = path.GetChild(1).position;
         Vector2 p2 = path.GetChild(2).position;
