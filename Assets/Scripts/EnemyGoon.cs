@@ -12,11 +12,20 @@ public class EnemyGoon : Enemy
         flightLeaveCoroutine = _pathMover.MoveAlongPath(_paths[1], _pathSpeedModifier, gameObject);
     }
 
-    public override void StartMoving() {
-        StartCoroutine(CombatActions());
+    public override void StartMoving()
+    {
+        try
+        {
+            StartCoroutine(CombatActions());
+        }
+        catch
+        {
+            Debug.LogWarning($"Coroutine failed to start on {gameObject.name}");
+        }
     }
 
-    IEnumerator ShootGuns() {
+    IEnumerator ShootGuns()
+    {
         yield return StartCoroutine(_gun.ShootThenWait(3, 0.2f));
     }
 
