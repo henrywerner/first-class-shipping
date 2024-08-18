@@ -8,10 +8,21 @@ public abstract class Gun : MonoBehaviour, IShootable
     
     [SerializeField] protected GameObject[] _nodes;
 
+    private bool _isOnCooldown = false;
+
     public virtual void Shoot() {
         foreach (GameObject node in _nodes)
         {
             GameObject bullet = Instantiate(_bullet, node.transform.position, node.transform.rotation);
+        }
+    }
+
+    public virtual void ShootWithCooldown(float rate)
+    {
+        if (!_isOnCooldown)
+        {
+            StartCoroutine(ShootThenWait(1, rate));
+            _isOnCooldown = true;
         }
     }
 
@@ -24,6 +35,7 @@ public abstract class Gun : MonoBehaviour, IShootable
         {
             this.Shoot();
             yield return new WaitForSeconds(waitTime);
+            _isOnCooldown = false;
         }
     }
 }
