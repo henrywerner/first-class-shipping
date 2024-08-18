@@ -35,21 +35,30 @@ public class FsmLevel01 : StateMachine
         ChangeState(waves.Dequeue());
     }
 
-    public void StartWaveAfterSeconds(float delay) {
-        StartCoroutine(StartWaveAfterSecondsCoroutine(delay));
-    }
-
-    protected IEnumerator StartWaveAfterSecondsCoroutine(float delay) {
-        // NOTE: THIS WILL BREAK IF WE ADD FUNCTIONALITY FOR ENDING THE WAVE WHEN ALL ARE DEAD
-        yield return new WaitForSecondsRealtime(delay);   
+    public void NextWave()
+    {
         ChangeState(waves.Dequeue());
     }
 
-    public void SpawnEnemyAfterSeconds(Enemy enemy, float delay) {
+    public void StartWaveAfterSeconds(float delay)
+    {
+        StartCoroutine(StartWaveAfterSecondsCoroutine(delay));
+    }
+
+    protected IEnumerator StartWaveAfterSecondsCoroutine(float delay)
+    {
+        // NOTE: THIS WILL BREAK IF WE ADD FUNCTIONALITY FOR ENDING THE WAVE WHEN ALL ARE DEAD
+        yield return new WaitForSecondsRealtime(delay);
+        NextWave();
+    }
+
+    public void SpawnEnemyAfterSeconds(Enemy enemy, float delay)
+    {
         StartCoroutine(SpawnEnemyAfterSecondsCoroutine(enemy, delay));
     }
 
-    protected IEnumerator SpawnEnemyAfterSecondsCoroutine(Enemy enemy, float delay) {
+    protected IEnumerator SpawnEnemyAfterSecondsCoroutine(Enemy enemy, float delay)
+    {
         yield return new WaitForSecondsRealtime(delay);
         enemy.StartMoving();
         yield return null;

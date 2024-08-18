@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class EnemyHealth : HealthSystem
 {
-  
+    public override void Kill()
+    {
+        EventManager.current.EnemyKilled(); // Send enemy killed event
+        base.Kill();
+    }
 }
