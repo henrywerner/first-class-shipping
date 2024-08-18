@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,13 @@ public abstract class AbsAttachable : MonoBehaviour
     public AbsAttachable NextAttachment = null;
     public AbsAttachable ParrentAttachment = null;
     [SerializeField] float detatchCooldown = 0.5f;
+
+    public static event Action OnGunAttachmentUpdate;
+
+    public void GunAttachmentUpdate()
+    {
+        OnGunAttachmentUpdate?.Invoke();
+    }
 
     public void AttachTo(AbsAttachable argParentAttachment)
     {
@@ -26,11 +34,13 @@ public abstract class AbsAttachable : MonoBehaviour
         this.transform.position = argParentAttachment.RecievingNode.position + (this.transform.position - ConnectingNode.transform.position);
         argParentAttachment.NextAttachment = this;
         ParrentAttachment = argParentAttachment;
+
+        GunAttachmentUpdate();
     }
 
     public void DetachWithSpeed()
     {
-        float random = Random.Range(0f, 260f);
+        float random = UnityEngine.Random.Range(0f, 260f);
         DetachWithSpeed(new Vector2(Mathf.Cos(random), Mathf.Sin(random)) * 100);
     }
 
@@ -39,13 +49,12 @@ public abstract class AbsAttachable : MonoBehaviour
         if (ParrentAttachment != null) //already detatched
         {
             Detach();
-            this.gameObject.AddComponent<Rigidbody2D>();
-            Rigidbody2D rb2d = this.gameObject.GetComponent<Rigidbody2D>();
+            Rigidbody2D rb2d = this.gameObject.AddComponent<Rigidbody2D>();
             rb2d.isKinematic = false;
             rb2d.gravityScale = 0;
-            float random = Random.Range(0f, 260f);
+
             rb2d.AddForce(argForce);
-            rb2d.AddTorque(Random.Range(4, 8), ForceMode2D.Impulse);
+            rb2d.AddTorque(UnityEngine.Random.Range(-8, 8), ForceMode2D.Impulse);
         }
     }
 
@@ -61,6 +70,8 @@ public abstract class AbsAttachable : MonoBehaviour
         {
             NextAttachment.Detach();
         }
+
+        GunAttachmentUpdate();
     }
     
     IEnumerator DisableCollionsForSeconds(float seconds)

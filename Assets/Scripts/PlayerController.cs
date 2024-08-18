@@ -7,6 +7,8 @@ using UnityEngine;
 [RequireComponent(typeof(HealthSystem))]
 public class PlayerController : MonoBehaviour
 {
+    
+
     [SerializeField] GameObject[] ConnectionNodes;
     private List<PlayerBasicGun> _gunList = new List<PlayerBasicGun>();
 
@@ -33,9 +35,16 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        AbsAttachable.OnGunAttachmentUpdate += UpdateGunList;
+
         _moveDirection = Vector3.zero;
         _healthSystem = GetComponent<HealthSystem>();
         _isDodging = false;
+    }
+
+    private void OnDisable()
+    {
+        AbsAttachable.OnGunAttachmentUpdate -= UpdateGunList;
     }
 
     private void FixedUpdate()
@@ -67,8 +76,6 @@ public class PlayerController : MonoBehaviour
             {
                 node.gameObject.GetComponent<RootAttachable>().Detach();
             }
-
-            UpdateGunList();
         }
     }
 
@@ -131,8 +138,6 @@ public class PlayerController : MonoBehaviour
             argComponent.AttachTo(attachPoint);
             argComponent.transform.parent = this.transform;
         }
-
-        UpdateGunList();
     }
 
     private void DodgeRoll()
@@ -203,8 +208,6 @@ public class PlayerController : MonoBehaviour
             throwingGun.DetachWithSpeed(detachForce);
             detachedSuccess = true;
         }
-
-        UpdateGunList();
 
         return detachedSuccess;
     }
