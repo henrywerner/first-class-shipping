@@ -11,24 +11,36 @@ public class Bullet : MonoBehaviour
     [SerializeField] public float MoveSpeed = 0.3f;
     [SerializeField] private int _damage = 1;
     [SerializeField] public bool isEnemy = true;
+    [SerializeField] float _despawnTime = 3f;
 
+    float _startTime;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _rb.gravityScale = 0;
-        Physics2D.IgnoreLayerCollision(6, 6); // Ignore collisions with other bullets   
+        Physics2D.IgnoreLayerCollision(6, 6); // Ignore collisions with other bullets  
+        _startTime = Time.time;
     }
 
     private void FixedUpdate()
     {
         Movement(_rb);
+        CheckShouldDespawn();
     }
 
     protected virtual void Movement(Rigidbody2D rb)
     {
         Vector2 moveOffset = transform.up * MoveSpeed;
         rb.MovePosition(rb.position + moveOffset);
+    }
+
+    private void CheckShouldDespawn()
+    {
+        if(Time.time - _startTime >= _despawnTime)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)

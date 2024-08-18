@@ -14,12 +14,27 @@ public class PlayerController : MonoBehaviour
         set => _moveSpeed = value;
     }
 
+    Vector3 _moveDirection;
+
     private void FixedUpdate()
     {
         Move();
-        if (Input.GetAxis("Fire1") != 0)
+        ProcessInputs();
+    }
+
+    private void ProcessInputs()
+    {
+        // calculate movement amount
+        _moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        if (Input.GetAxis("Fire1") >= 0)
         {
             FireGuns();
+        }
+
+        if (Input.GetAxis("Dodge") >= 0)
+        {
+            DodgeRoll();
         }
 
         if (Input.GetAxis("Debug") != 0)
@@ -31,21 +46,20 @@ public class PlayerController : MonoBehaviour
 
     public void Move()
     {
-        // calculate movement amount
-        float verticalMoveThisFrame = Input.GetAxisRaw("Vertical") * _moveSpeed;
-        //Debug.Log($"Vertical: {Input.GetAxisRaw("Vertical")}");
-        float horizontalMoveThisFrame = Input.GetAxisRaw("Horizontal") * _moveSpeed;
-        //Debug.Log($"Horizontal: {Input.GetAxisRaw("Horizontal")}");
-        // move player
-        //this.transform.position = this.transform.position + (transform.up * verticalMoveThisFrame) + (transform.right * horizontalMoveThisFrame);
-        Vector3 moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        transform.Translate(moveDirection.normalized * _moveSpeed);
+        transform.Translate(_moveDirection.normalized * _moveSpeed);
     }
 
     public void FireGuns()
     {
         // TODO
         Debug.Log("Fire player guns");
+    }
+
+    private void DodgeRoll()
+    {
+        // Set invul
+        // Show dodge visuals and play sfx
+        // Start Coroutine to count frames/time till dodge roll end. Pass in frames
     }
 
     public void AttachComponent(AbsAttachable argComponent)
