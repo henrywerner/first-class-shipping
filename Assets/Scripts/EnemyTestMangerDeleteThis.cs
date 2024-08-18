@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyTestMangerDeleteThis : EnemyBase
+public class EnemyTestMangerDeleteThis : Enemy
 {
     void Start()
     {

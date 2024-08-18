@@ -19,11 +19,11 @@ public abstract class Gun : MonoBehaviour, IShootable
         StartCoroutine(ShootThenWait(amountOfTimes, rate));
     }
 
-    IEnumerator ShootThenWait(int amountOfTimes, float waitTime) {
+    public IEnumerator ShootThenWait(int amountOfTimes, float waitTime) {
         for (int i = 0; i < amountOfTimes; i++)
         {
             this.Shoot();
-            yield return new WaitForSecondsRealtime(waitTime);
+            yield return new WaitForSeconds(waitTime);
         }
     }
 }
