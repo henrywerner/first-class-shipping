@@ -31,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7986548631084027962}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3451378334046952418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2544976361793394366}
+  m_Layer: 0
+  m_Name: GunBarrel
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2544976361793394366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3451378334046952418}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7986548631084027962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3453984091919103747
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,6 +74,7 @@ GameObject:
   - component: {fileID: 1025776150103686930}
   - component: {fileID: 339534400307949712}
   - component: {fileID: 1981192427717224342}
+  - component: {fileID: 4746277802477954699}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Gun
@@ -65,6 +97,7 @@ Transform:
   m_Children:
   - {fileID: 2282608278392968830}
   - {fileID: 7580204797757058596}
+  - {fileID: 2544976361793394366}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1025776150103686930
@@ -180,6 +213,21 @@ MonoBehaviour:
   RecievingNode: {fileID: 7580204797757058596}
   NextAttachment: {fileID: 0}
   ParrentAttachment: {fileID: 0}
+--- !u!114 &4746277802477954699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453984091919103747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e72b60bacfaf1b46971b4d9a4f83130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bullet: {fileID: 7346476394007590631, guid: 23a25cf049a0ae544b5632c6425bfd31, type: 3}
+  _nodes:
+  - {fileID: 3451378334046952418}
 --- !u!1 &8737262933656614885
 GameObject:
   m_ObjectHideFlags: 0

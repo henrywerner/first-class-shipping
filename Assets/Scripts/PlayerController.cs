@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject[] ConnectionNodes;
+    private List<PlayerTestGun> _gunList = new List<PlayerTestGun>();
 
     [SerializeField] float _moveSpeed = .1f;
     public float MoveSpeed
@@ -27,12 +29,12 @@ public class PlayerController : MonoBehaviour
         // calculate movement amount
         _moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        if (Input.GetAxis("Fire1") >= 0)
+        if (Input.GetAxis("Fire1") > 0)
         {
             FireGuns();
         }
 
-        if (Input.GetAxis("Dodge") >= 0)
+        if (Input.GetAxis("Dodge") > 0)
         {
             DodgeRoll();
         }
@@ -56,6 +58,7 @@ public class PlayerController : MonoBehaviour
             if (throwingGun != null)
             {
                 throwingGun.DetachWithSpeed();
+                UpdateGunList();
             }
         }
     }
@@ -69,6 +72,28 @@ public class PlayerController : MonoBehaviour
     {
         // TODO
         Debug.Log("Fire player guns");
+        foreach (PlayerTestGun gun in _gunList)
+        {
+            gun.Shoot();
+        }
+    }
+
+    private void UpdateGunList()
+    {
+        _gunList.Clear();
+
+        foreach (GameObject node in ConnectionNodes)
+        {
+            AbsAttachable currentNode = node.GetComponent<RootAttachable>().NextAttachment;
+            while (currentNode != null) 
+            {
+                if (currentNode.gameObject.GetComponent<GunAttachable>() != null)
+                {
+                    _gunList.Add(currentNode.GetComponent<PlayerTestGun>());
+                }
+                currentNode = currentNode.NextAttachment;
+            }
+        }
     }
 
     private void DodgeRoll()
@@ -86,6 +111,8 @@ public class PlayerController : MonoBehaviour
             argComponent.AttachTo(attachPoint);
             argComponent.transform.parent = this.transform;
         }
+
+        UpdateGunList();
     }
 
     private RootAttachable GetClosestRootNode(GameObject Obj)
