@@ -12,11 +12,11 @@ public abstract class AbsAttachable : MonoBehaviour
     [SerializeField] float detatchCooldown = 0.5f;
     [SerializeField] GameObject attachSFX;
 
-    public static event Action OnGunAttachmentUpdate;
+    public static event Action OnAttachmentsUpdate;
 
-    public void GunAttachmentUpdate()
+    public void AttachmentsUpdate()
     {
-        OnGunAttachmentUpdate?.Invoke();
+        OnAttachmentsUpdate?.Invoke();
     }
 
     public void AttachTo(AbsAttachable argParentAttachment)
@@ -37,7 +37,7 @@ public abstract class AbsAttachable : MonoBehaviour
         ParrentAttachment = argParentAttachment;
         AudioController.controller.PlaySFX(attachSFX, transform.position);
 
-        GunAttachmentUpdate();
+        AttachmentsUpdate();
     }
 
     public void DetachWithSpeed()
@@ -73,7 +73,7 @@ public abstract class AbsAttachable : MonoBehaviour
             NextAttachment.Detach();
         }
 
-        GunAttachmentUpdate();
+        AttachmentsUpdate();
     }
     
     IEnumerator DisableCollionsForSeconds(float seconds)
@@ -95,7 +95,7 @@ public abstract class AbsAttachable : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         // Debug.Log("Collided with " + other.gameObject.name);
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && other.collider.gameObject.tag != "Friendly")
         {
             //Debug.Log("Collided with " + other.gameObject.name);
             other.gameObject.GetComponent<PlayerController>().AttachComponent(this);

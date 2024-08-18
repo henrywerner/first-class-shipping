@@ -13,6 +13,6 @@ public class RootAttachable : AbsAttachable
             NextAttachment = null;
         }
 
-        GunAttachmentUpdate();
+        AttachmentsUpdate();
     }
 }

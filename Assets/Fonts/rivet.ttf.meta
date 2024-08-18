@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d8255582564a8b44d82363234b0a0c56
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: 0
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Pixel Font - Rivet
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: edd4326072b306f45b56f77f681fe657, type: 3}
+  customCharacters: 
+  fontRenderingMode: 2
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
