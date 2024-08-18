@@ -8,6 +8,7 @@ public abstract class AbsAttachable : MonoBehaviour
     [SerializeField] Transform RecievingNode;
     public AbsAttachable NextAttachment = null;
     public AbsAttachable ParrentAttachment = null;
+    [SerializeField] float detatchCooldown = 0.5f;
 
     public void AttachTo(AbsAttachable argParentAttachment)
     {
@@ -51,7 +52,7 @@ public abstract class AbsAttachable : MonoBehaviour
         ParrentAttachment.NextAttachment = null;
         ParrentAttachment = null;
 
-        StartCoroutine(DisableCollionsForSeconds(0.5f));
+        StartCoroutine(DisableCollionsForSeconds(detatchCooldown));
 
         if (NextAttachment != null)
         {
