@@ -39,6 +39,8 @@ public class EnemyTrident : Enemy
 
         yield return StartCoroutine(flightLeaveCoroutine);
 
+        gameObject.GetComponent<IDamageable>()?.Kill();
+
         Destroy(_parentObject != null ? _parentObject : gameObject);
     }
 }

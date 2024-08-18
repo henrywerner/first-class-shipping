@@ -37,6 +37,8 @@ public class EnemyGoon : Enemy
 
         yield return StartCoroutine(flightLeaveCoroutine);
 
+        gameObject.GetComponent<IDamageable>()?.Kill();
+
         Destroy(_parentObject != null ? _parentObject : gameObject);
     }
 }
