@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float _dodgeBoostTime = .4f;
     [SerializeField] float _dodgeCoolDown = 1f;
     [SerializeField] float _dodgeSpeed = .5f;
+    [SerializeField] float _dodgeDetachSpeed = 100f;
     [SerializeField] GameObject _dodgeSprite;
 
     Vector3 _moveDirection;
@@ -142,7 +143,8 @@ public class PlayerController : MonoBehaviour
         if (!_isDodging && Time.time >= _lastDodgeTime + _dodgeCoolDown)
         {
             // Require a part to use dodge
-            if (DetatchSingle()) //Later might need to be more or none.
+            Vector3 detachDirection = _moveDirection != Vector3.zero ? -_moveDirection : Vector3.left;
+            if (DetatchSingle(detachDirection, _dodgeDetachSpeed)) //Later might need to be more or none.
             {
                 Debug.Log("Dodge this!");
                 // Set invul
@@ -191,14 +193,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private bool DetatchSingle()
+    //TODO make more abstract version with several gun detaches
+    private bool DetatchSingle(Vector2 detatchDirection, float detachSpeed)
     {
         Debug.Log("Detaching single gun");
         bool detachedSuccess = false;
         AbsAttachable throwingGun = GetRandAttachedTail();
         if (throwingGun != null)
         {
-            throwingGun.DetachWithSpeed();
+            Vector2 detachForce = detatchDirection * detachSpeed;
+            throwingGun.DetachWithSpeed(detachForce);
             detachedSuccess = true;
         }
 
