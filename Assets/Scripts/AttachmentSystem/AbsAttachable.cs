@@ -37,7 +37,7 @@ public abstract class AbsAttachable : MonoBehaviour
         rb2d.gravityScale = 0;
         float random = Random.Range(0f, 260f);
         rb2d.AddForce(argForce);
-        rb2d.AddTorque(Random.Range(4, 10), ForceMode2D.Impulse);
+        rb2d.AddTorque(Random.Range(4, 8), ForceMode2D.Impulse);
     }
 
     virtual public void Detach()
