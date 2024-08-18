@@ -7,19 +7,34 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject[] ConnectionNodes;
 
-    [SerializeField] float _moveSpeed = .25f;
+    [SerializeField] float _moveSpeed = .1f;
     public float MoveSpeed
     {
         get => _moveSpeed;
         set => _moveSpeed = value;
     }
 
+    Vector3 _moveDirection;
+
     private void FixedUpdate()
     {
         Move();
-        if (Input.GetAxis("Fire1") != 0)
+        ProcessInputs();
+    }
+
+    private void ProcessInputs()
+    {
+        // calculate movement amount
+        _moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        if (Input.GetAxis("Fire1") >= 0)
         {
             FireGuns();
+        }
+
+        if (Input.GetAxis("Dodge") >= 0)
+        {
+            DodgeRoll();
         }
 
         if (Input.GetAxis("Debug") != 0)
@@ -34,17 +49,20 @@ public class PlayerController : MonoBehaviour
 
     public void Move()
     {
-        // calculate movement amount
-        float verticalMoveThisFrame = Input.GetAxis("Vertical") * _moveSpeed;
-        float horizontalMoveThisFrame = Input.GetAxis("Horizontal") * _moveSpeed;
-        // move player
-        this.transform.position = this.transform.position + (transform.up * verticalMoveThisFrame) + (transform.right * horizontalMoveThisFrame);
+        transform.Translate(_moveDirection.normalized * _moveSpeed);
     }
 
     public void FireGuns()
     {
         // TODO
         Debug.Log("Fire player guns");
+    }
+
+    private void DodgeRoll()
+    {
+        // Set invul
+        // Show dodge visuals and play sfx
+        // Start Coroutine to count frames/time till dodge roll end. Pass in frames
     }
 
     public void AttachComponent(AbsAttachable argComponent)
