@@ -76,10 +76,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Debug") != 0)
         {
             Debug.Log("detaching all");
+            DetachAllGunsWithForce();
+            /*
             foreach (var node in ConnectionNodes)
             {
-                node.gameObject.GetComponent<RootAttachable>().Detach();
+                node.gameObject.GetComponent<RootAttachable>().DetachAllConnected();
             }
+            */
         }
     }
 
@@ -142,6 +145,18 @@ public class PlayerController : MonoBehaviour
             AbsAttachable attachPoint = GetClosestRootNode(argComponent.gameObject).FindTail();
             argComponent.AttachTo(attachPoint);
             argComponent.transform.parent = this.transform;
+        }
+    }
+
+    public void DetachAllGunsWithForce()
+    {
+        foreach(GameObject node in ConnectionNodes)
+        {
+            AbsAttachable currentNode = node.GetComponent<RootAttachable>().NextAttachment;
+            if (currentNode != null)
+            {
+                currentNode.DetachWithForce(400f);
+            }
         }
     }
 
