@@ -11,6 +11,7 @@ public abstract class AbsAttachable : MonoBehaviour
     public AbsAttachable ParrentAttachment = null;
     [SerializeField] float detatchCooldown = 0.5f;
     [SerializeField] GameObject attachSFX;
+    [SerializeField] GameObject attachVFX;
 
     public static event Action OnAttachmentsUpdate;
 
@@ -36,6 +37,10 @@ public abstract class AbsAttachable : MonoBehaviour
         argParentAttachment.NextAttachment = this;
         ParrentAttachment = argParentAttachment;
         AudioController.controller.PlaySFX(attachSFX, transform.position);
+        if(attachVFX != null)
+        {
+            Instantiate(attachVFX, transform.position, transform.rotation);
+        }
 
         AttachmentsUpdate();
     }
