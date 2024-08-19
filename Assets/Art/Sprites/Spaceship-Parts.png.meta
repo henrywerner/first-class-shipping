@@ -1,0 +1,2622 @@
+fileFormatVersion: 2
+guid: 7b9bb584e98e8014bb55e63dacfa58fd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spaceship-Parts_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 303
+        width: 16
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd8639ace4d2dc438bdb443cac0862b
+      internalID: -767046312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 347
+        width: 11
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e49598cceee61842af8ab6ac89c55c5
+      internalID: -625711106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_2
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 275
+        width: 90
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf8ceed49bb85884396f3aa25668d9d5
+      internalID: 1487493468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_3
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 352
+        width: 14
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd81f27c0ce31341bafb51928313a16
+      internalID: 247697149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_4
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 355
+        width: 4
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6899635ca29f0834c8ac9a3bc2d6a2fb
+      internalID: -1462196204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_5
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 340
+        width: 16
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ea8b0bb9a16bc4d93954b3aad905bd
+      internalID: 611514645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_6
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 342
+        width: 16
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6364ea3cc5c46714d9cab5bf25fc540f
+      internalID: -793658775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_7
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 356
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4733ffe2f0a65f42b2e9d899ff16605
+      internalID: 1330968634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_8
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 359
+        width: 5
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82491af0de5b8c24fb18a255d1c829c8
+      internalID: 898143259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_9
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 359
+        width: 5
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05586893a59129648b11f9d0e88442ee
+      internalID: -841391940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_10
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 309
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bff0f54f602db4db5bf779ea4f5dde
+      internalID: -1528582394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_11
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 352
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd87557da4ad1a54fab5330a3a81f47c
+      internalID: 697322939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_12
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 307
+        width: 15
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a3d9aad8ae29a4db3286990a3f67cf
+      internalID: 1121208083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_13
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 309
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24932d69601ca904c9bb9ee30e96ab40
+      internalID: -980676464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_14
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 270
+        width: 37
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56be281a72ff98c439107b517467cf85
+      internalID: -715101058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_15
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 310
+        width: 14
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7973e2e02e9c5347bb6a664d5f2d2bd
+      internalID: -1457683612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_16
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 321
+        width: 18
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b294c0ebf556046831b5f2f9e7135c
+      internalID: -1703402687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_17
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 353
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289095aa4d679d24b933494154666253
+      internalID: 1472644684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_18
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 302
+        width: 54
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94fb99ed23ad7347ae096a8c2391cfe
+      internalID: 1222087073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_19
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 168
+        width: 131
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6422a3accb7d6d147931d0da577769f4
+      internalID: -1764063604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_20
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 333
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad3c3210e2ef854ea9f17e3aa6b12f6
+      internalID: 1664855893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_21
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 288
+        width: 77
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a790a6da0b95c04daaf37163177769f
+      internalID: 1855084981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_22
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 289
+        width: 22
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c80124284829149a5a518c3659716f
+      internalID: 2046473457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_23
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 332
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63db8c03d60c0f428b46477dde2d522
+      internalID: 244610263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_24
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 331
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386091af4c00fcc4bb595e095026d4bf
+      internalID: -1179225719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_25
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 305
+        width: 9
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acae5b7573ccbd14c8bc6a97d9af247c
+      internalID: 1700597188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_26
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 278
+        width: 28
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7461060e1ea9146b696bcc88d3038b
+      internalID: 322212165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_27
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 317
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e5156ce3ba5d74eb6afa38ac6adffe
+      internalID: 2022367224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_28
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 299
+        width: 10
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de072dbd505f4a84e8b73d8ba58dddd1
+      internalID: -1693943248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_29
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 317
+        width: 7
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838daa1a2add70842b2337f9e491b92d
+      internalID: 297176526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_30
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 327
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9b44ff9b5f7654fbcdba4d062b0849
+      internalID: 1979427968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_31
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 335
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a1be62ddcdb5d45a27b0690b7ea7e0
+      internalID: -1906291761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_32
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 285
+        width: 19
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d751cb165b060e4fb634508816c9de0
+      internalID: -1549193460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_33
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 321
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ffe5157cef7d94eae4c0247f818d33
+      internalID: 134709022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_34
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 248
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448b14aae4d65864e8245ea3f376cf24
+      internalID: 967494771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_35
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 81
+        width: 62
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298c951e3dd45b3418fbb3742f5f56f7
+      internalID: 566664422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_36
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 246
+        width: 10
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419cf4e3dede14c4f8b1260e82b0c33f
+      internalID: 1774299194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_37
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 216
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad34f16e9d962a479b53daff2a100a3
+      internalID: -14120238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_38
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 251
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a3d5943d8f46c4fbe5cd5a2f5abc9e
+      internalID: -1308774357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_39
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 260
+        width: 14
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b9c2c7c971e8143b71f5b0175c940e
+      internalID: -1675579655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_40
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 219
+        width: 42
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872536a4c2c020c47be429b4d08a832a
+      internalID: -1610361990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_41
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 230
+        width: 16
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab416e4963f73e4aa6c3d29c0681328
+      internalID: 594878771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_42
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 271
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ae58e2825a0a442beef335da217947
+      internalID: -967926102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_43
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 272
+        width: 11
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc46cc4198a9d24eb8a61c501ebd676
+      internalID: 1219152942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_44
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 260
+        width: 20
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42547481d123b2540bd6b04b98ec940e
+      internalID: -1690630840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_45
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 214
+        width: 48
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418159296a65b2947aceb731b30bd530
+      internalID: 1363261250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_46
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 229
+        width: 60
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755c90be3847776478dc4e0710f90019
+      internalID: -1639846654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_47
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 234
+        width: 28
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e0422ed2c4f194283a37aa1f4aabbe
+      internalID: 1132461260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_48
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 253
+        width: 26
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130cdabdd7f7bee49bc8cfbc41c77280
+      internalID: 548158065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_49
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 108
+        width: 31
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b028d2c0fe30d024699b93cecd627f1f
+      internalID: -926078558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_50
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 219
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4ebf57fb878d441baf859460d59b1a
+      internalID: 363399612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_51
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 234
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d670265f91fa3d44b927816a4ba1334
+      internalID: 1419937252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_52
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 230
+        width: 19
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10d7f46fec10684dbe3016e0e023dad
+      internalID: 302868519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_53
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 249
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e5dc401dde24f45b8a82055d956193
+      internalID: 1621634087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_54
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 230
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5118d7da10d3445b59eb8f2f29670c
+      internalID: -711097186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_55
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 14
+        width: 62
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db69c72d840292409c5807d2f5db188
+      internalID: 1356462631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_56
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 49
+        width: 24
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fe6e2f8d077694fbdb563b1f6f10e5
+      internalID: -1604554253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_57
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 224
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d70abcd98e7c340801f644303d366b
+      internalID: -1321642867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_58
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 157
+        width: 33
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198fdd13247a0864f9ddf0d05b6517e3
+      internalID: 32981033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_59
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 196
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975cfb8595bc31f4f9f8bd5f909c9e0f
+      internalID: -1879453762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_60
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 182
+        width: 13
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d4ab4299b6aa04899c6a3a9af969da
+      internalID: 1186760819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_61
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 193
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6771c7b9b95c62442a5bcf920039e74c
+      internalID: -789211481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_62
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 165
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d68a26805c0a8747b5ec24cfc7ec90f
+      internalID: -1799397827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_63
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 161
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ca24970027cc742b51174f350dd885
+      internalID: 1649757017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_64
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 144
+        width: 15
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4e2b72b8f83f54a8b71166a3a2f568
+      internalID: -82611422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_65
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 124
+        width: 30
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af15e93173264b646ac235223254c0ea
+      internalID: -1621172456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_66
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 156
+        width: 24
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ac05dec1c673640bba28e8d2acada5
+      internalID: -1681933244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_67
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 2
+        width: 44
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 926e1e1b767827f43a2904edc0f96456
+      internalID: 2054629209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_68
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 177
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f415a46456fd751409a9a02bc9358ff1
+      internalID: 1511140794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_69
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 107
+        width: 17
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 381c23cafc34f3a45ba4f5eca0360f5b
+      internalID: -1692827949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_70
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 36
+        width: 94
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338bff10d1e94714abde5fc671a0039f
+      internalID: 562205135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_71
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 160
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771ead56eb06d4b4293c694559de2216
+      internalID: -1395646126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_72
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 179
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4028c1ee8d0856b49b611e6b9003904d
+      internalID: 1114470920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_73
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 147
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8801455ee45f6e43b3904156fcc55e4
+      internalID: -694437200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_74
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 93
+        width: 22
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f9ce1b00492aa4dbab5f7ca69a0020
+      internalID: -1391465944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_75
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 107
+        width: 54
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4f1e8ebdfcf024fa661f9ae46d1d04
+      internalID: 637874817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_76
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 172
+        width: 34
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ccaefe57cb11564db2a78492b66962f
+      internalID: -911431372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_77
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 98
+        width: 22
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbe6d59b08a12441bc9eaac58fd6a85
+      internalID: 1196374534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_78
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 25
+        width: 69
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48c52e493e9bb849a5d64f140869fd9
+      internalID: -1504872026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_79
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 124
+        width: 20
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88054904b1b768448b11086974e5a12c
+      internalID: -938658204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_80
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 158
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9e251f78da7724c8ed4c6ac9d8978f
+      internalID: -1813794141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_81
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 45
+        width: 20
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a8a67b40bc77f4dabcd31c7f210b56
+      internalID: -1129961854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_82
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 45
+        width: 32
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76dc28868c7681e499943cf1222ca0ee
+      internalID: 1918265684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_83
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 94
+        width: 37
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4858aea0b506ad4b84c273363b9f0c2
+      internalID: 492705019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_84
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 74
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580a75e5b7a35284c8e24f21b4058447
+      internalID: 1281264173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_85
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 79
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66440d757a66b6a418f0fe847397ab3b
+      internalID: 993606739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_86
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 78
+        width: 19
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9152490d03f5c4eb5c7a269c51fbd4
+      internalID: -1427107992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_87
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 55
+        width: 56
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a79788fa18f1f6468ceb32bbb6825cc
+      internalID: 1366844424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_88
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 109
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe377916276dc3249a90d9e8e2ef792f
+      internalID: 868688650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_89
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 55
+        width: 43
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b729dac5a897f464499ed128875229c0
+      internalID: -446863207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_90
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 108
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0bbd1d268623646895ff60bb95092d
+      internalID: -318795155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_91
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1
+        width: 11
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d11a9d4865d3b478f1badef3cdaa9b
+      internalID: 1620144625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_92
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 37
+        width: 14
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f559e739f27cb42a98b80e1f0af86d
+      internalID: 488076671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_93
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 9
+        width: 29
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd729f850c998444bbf022a83f664fd1
+      internalID: 908122031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_94
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 21
+        width: 27
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc44890f2e3926d478fa39758aff4a05
+      internalID: 262290122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_95
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 53
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1158879f449db87438ae682c12b619ef
+      internalID: -1223367249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_96
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 50
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae5ed6df2c6048468b6cee9641879b2
+      internalID: -837547384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_97
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 52
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80dd55a3f89f58241ad60bdc369419f1
+      internalID: 883443889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_98
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 44
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ac97a30793cf5459f1cb38722ea2d4
+      internalID: -342121809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_99
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 58
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbdf85353c678247ba58ede5fd9fef2
+      internalID: -1809734834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_100
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 7
+        width: 26
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db65bd2196f44b742a9992c5cbb32181
+      internalID: -152809386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_101
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 5
+        width: 34
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6df3f8992ca5c343816dcd9d3f0b33d
+      internalID: -1575165087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_102
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 4
+        width: 17
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe121f759f3aff469b7e5f2aef05205
+      internalID: -943657138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_103
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 2
+        width: 37
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc4755af7a5be1439c06f21dea5f41a
+      internalID: -1044893938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_104
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 3
+        width: 24
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2dbaf3916bc631449abb4e5a179a056
+      internalID: 877987667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_105
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 20
+        width: 34
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3ac19d235f0e645829c1b2047bee8b
+      internalID: -671954766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_106
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 42
+        width: 20
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0742be867e7144a44ab0d47e8397a200
+      internalID: -767023941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_107
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 10
+        width: 45
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41420854d23900d449957f3dbdb71d98
+      internalID: 1514599510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_108
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 15
+        width: 10
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990ca776d7ddbe046850db775f921797
+      internalID: -729280205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_109
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 6
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00444b0fd8e5e864e883f9279ab64f82
+      internalID: -397452334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_110
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 35
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6042453cf67536445bbd25f2174a83b8
+      internalID: 1529259465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_111
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 19
+        width: 17
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6ac430a34a372418e5d6ffdfdae20e
+      internalID: 1845950255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_112
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 12
+        width: 92
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef132a7c4bc49241895d20119ee3441
+      internalID: 408610534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceship-Parts_113
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 8
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b07c6359e537d14dac5bcb7e9962827
+      internalID: 1422527183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Spaceship-Parts_0: -767046312
+      Spaceship-Parts_1: -625711106
+      Spaceship-Parts_10: -1528582394
+      Spaceship-Parts_100: -152809386
+      Spaceship-Parts_101: -1575165087
+      Spaceship-Parts_102: -943657138
+      Spaceship-Parts_103: -1044893938
+      Spaceship-Parts_104: 877987667
+      Spaceship-Parts_105: -671954766
+      Spaceship-Parts_106: -767023941
+      Spaceship-Parts_107: 1514599510
+      Spaceship-Parts_108: -729280205
+      Spaceship-Parts_109: -397452334
+      Spaceship-Parts_11: 697322939
+      Spaceship-Parts_110: 1529259465
+      Spaceship-Parts_111: 1845950255
+      Spaceship-Parts_112: 408610534
+      Spaceship-Parts_113: 1422527183
+      Spaceship-Parts_12: 1121208083
+      Spaceship-Parts_13: -980676464
+      Spaceship-Parts_14: -715101058
+      Spaceship-Parts_15: -1457683612
+      Spaceship-Parts_16: -1703402687
+      Spaceship-Parts_17: 1472644684
+      Spaceship-Parts_18: 1222087073
+      Spaceship-Parts_19: -1764063604
+      Spaceship-Parts_2: 1487493468
+      Spaceship-Parts_20: 1664855893
+      Spaceship-Parts_21: 1855084981
+      Spaceship-Parts_22: 2046473457
+      Spaceship-Parts_23: 244610263
+      Spaceship-Parts_24: -1179225719
+      Spaceship-Parts_25: 1700597188
+      Spaceship-Parts_26: 322212165
+      Spaceship-Parts_27: 2022367224
+      Spaceship-Parts_28: -1693943248
+      Spaceship-Parts_29: 297176526
+      Spaceship-Parts_3: 247697149
+      Spaceship-Parts_30: 1979427968
+      Spaceship-Parts_31: -1906291761
+      Spaceship-Parts_32: -1549193460
+      Spaceship-Parts_33: 134709022
+      Spaceship-Parts_34: 967494771
+      Spaceship-Parts_35: 566664422
+      Spaceship-Parts_36: 1774299194
+      Spaceship-Parts_37: -14120238
+      Spaceship-Parts_38: -1308774357
+      Spaceship-Parts_39: -1675579655
+      Spaceship-Parts_4: -1462196204
+      Spaceship-Parts_40: -1610361990
+      Spaceship-Parts_41: 594878771
+      Spaceship-Parts_42: -967926102
+      Spaceship-Parts_43: 1219152942
+      Spaceship-Parts_44: -1690630840
+      Spaceship-Parts_45: 1363261250
+      Spaceship-Parts_46: -1639846654
+      Spaceship-Parts_47: 1132461260
+      Spaceship-Parts_48: 548158065
+      Spaceship-Parts_49: -926078558
+      Spaceship-Parts_5: 611514645
+      Spaceship-Parts_50: 363399612
+      Spaceship-Parts_51: 1419937252
+      Spaceship-Parts_52: 302868519
+      Spaceship-Parts_53: 1621634087
+      Spaceship-Parts_54: -711097186
+      Spaceship-Parts_55: 1356462631
+      Spaceship-Parts_56: -1604554253
+      Spaceship-Parts_57: -1321642867
+      Spaceship-Parts_58: 32981033
+      Spaceship-Parts_59: -1879453762
+      Spaceship-Parts_6: -793658775
+      Spaceship-Parts_60: 1186760819
+      Spaceship-Parts_61: -789211481
+      Spaceship-Parts_62: -1799397827
+      Spaceship-Parts_63: 1649757017
+      Spaceship-Parts_64: -82611422
+      Spaceship-Parts_65: -1621172456
+      Spaceship-Parts_66: -1681933244
+      Spaceship-Parts_67: 2054629209
+      Spaceship-Parts_68: 1511140794
+      Spaceship-Parts_69: -1692827949
+      Spaceship-Parts_7: 1330968634
+      Spaceship-Parts_70: 562205135
+      Spaceship-Parts_71: -1395646126
+      Spaceship-Parts_72: 1114470920
+      Spaceship-Parts_73: -694437200
+      Spaceship-Parts_74: -1391465944
+      Spaceship-Parts_75: 637874817
+      Spaceship-Parts_76: -911431372
+      Spaceship-Parts_77: 1196374534
+      Spaceship-Parts_78: -1504872026
+      Spaceship-Parts_79: -938658204
+      Spaceship-Parts_8: 898143259
+      Spaceship-Parts_80: -1813794141
+      Spaceship-Parts_81: -1129961854
+      Spaceship-Parts_82: 1918265684
+      Spaceship-Parts_83: 492705019
+      Spaceship-Parts_84: 1281264173
+      Spaceship-Parts_85: 993606739
+      Spaceship-Parts_86: -1427107992
+      Spaceship-Parts_87: 1366844424
+      Spaceship-Parts_88: 868688650
+      Spaceship-Parts_89: -446863207
+      Spaceship-Parts_9: -841391940
+      Spaceship-Parts_90: -318795155
+      Spaceship-Parts_91: 1620144625
+      Spaceship-Parts_92: 488076671
+      Spaceship-Parts_93: 908122031
+      Spaceship-Parts_94: 262290122
+      Spaceship-Parts_95: -1223367249
+      Spaceship-Parts_96: -837547384
+      Spaceship-Parts_97: 883443889
+      Spaceship-Parts_98: -342121809
+      Spaceship-Parts_99: -1809734834
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
