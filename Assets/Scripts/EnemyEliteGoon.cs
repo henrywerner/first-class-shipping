@@ -34,7 +34,7 @@ public class EnemyEliteGoon : Enemy
 
     IEnumerator ShootGuns()
     {
-        yield return StartCoroutine(_gun.ShootThenWait(5, 0.2f));
+        yield return StartCoroutine(_gun.ShootBurstCoroutine(5, 0.2f));
     }
 
     IEnumerator CombatActions() {

@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class RootAttachable : AbsAttachable
 {
-    public override void Detach()
+    public override void DetachAllConnected()
     {
         if (NextAttachment != null)
         {
-            NextAttachment.Detach();
+            NextAttachment.DetachAllConnected();
             NextAttachment = null;
         }
 

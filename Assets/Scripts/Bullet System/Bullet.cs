@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
-{   
+{
     [Header("Stats")]
     [SerializeField] public float MoveSpeed = 0.3f;
     [SerializeField] private int _damage = 1;
@@ -13,6 +13,8 @@ public class Bullet : MonoBehaviour
 
     [Header("VFX")]
     [SerializeField] GameObject _hitFX;
+    
+    private float boundsX, boundsY;
 
     float _startTime;
 
@@ -20,6 +22,10 @@ public class Bullet : MonoBehaviour
     {
         Physics2D.IgnoreLayerCollision(6, 6); // Ignore collisions with other bullets  
         _startTime = Time.time;
+
+        Vector3 cameraBounds = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0));
+        boundsX = cameraBounds.x;
+        boundsY = cameraBounds.y;
     }
 
     private void FixedUpdate()
@@ -36,7 +42,15 @@ public class Bullet : MonoBehaviour
 
     private void CheckShouldDespawn()
     {
-        if(Time.time - _startTime >= _despawnTime)
+        if (Time.time - _startTime >= _despawnTime)
+        {
+            Destroy(gameObject);
+        }
+        else if (transform.position.x < -boundsX || transform.position.x > boundsX)
+        {
+            Destroy(gameObject);
+        }
+        else if (transform.position.y < -boundsY || transform.position.y > boundsY)
         {
             Destroy(gameObject);
         }
@@ -44,19 +58,22 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        
-        IDamageable obj = other.collider.gameObject.GetComponent<IDamageable>();
-        Debug.Log($"{other.collider.gameObject} hit bullet");
 
-        if (obj == null) { // if obj isn't damageable
+        IDamageable obj = other.collider.gameObject.GetComponent<IDamageable>();
+        // Debug.Log($"{other.collider.gameObject} hit bullet");
+
+        if (obj == null)
+        { // if obj isn't damageable
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.collider.gameObject.GetComponent<Collider2D>());
             return;
         }
-        else if (other.collider.gameObject.CompareTag("Enemy") && isEnemy) {
+        else if (other.collider.gameObject.CompareTag("Enemy") && isEnemy)
+        {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.collider.gameObject.GetComponent<Collider2D>());
             return;
         }
-        else if (other.collider.gameObject.CompareTag("Friendly") && !isEnemy) {
+        else if (other.collider.gameObject.CompareTag("Friendly") && !isEnemy)
+        {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.collider.gameObject.GetComponent<Collider2D>());
             return;
         }

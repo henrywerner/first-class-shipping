@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Level01LevelEnd : IState
+public class Level01LevelEnd : ILevelState
 {
     private FsmLevel01 _gameState;
 
@@ -22,6 +22,11 @@ public class Level01LevelEnd : IState
     public void FixedTick()
     {
         
+    }
+
+    public int GetNumberOfEnemies()
+    {
+        return -1;
     }
 
     public void Tick()

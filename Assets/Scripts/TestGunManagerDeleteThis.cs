@@ -17,7 +17,7 @@ public class TestGunManagerDeleteThis : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Fire2")) {
-            _enemyGun.ShootMultipleTimes(5, 0.1f);
+            _enemyGun.ShootBurst(5, 0.1f);
         }
     }
 }

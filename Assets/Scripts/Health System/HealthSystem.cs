@@ -27,6 +27,7 @@ public abstract class HealthSystem : MonoBehaviour, IDamageable
 
     public virtual void Kill()
     {
+        _canBeHurt = false;
         AudioController.controller.PlaySFX(_deathSFX, transform.position);
 
         if (_destroyVFX != null)

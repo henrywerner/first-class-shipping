@@ -1,4 +1,4 @@
-public interface IState
+public interface ILevelState
 {
     // automatically gets called in the State machine. Allows you to delay flow if desired
     void Enter();
@@ -8,4 +8,7 @@ public interface IState
     void FixedTick();
     // automatically gets called in the State machine. Allows you to delay flow if desired
     void Exit();
+
+    // THIS IS SO DUMB DON"T DO THIS
+    int GetNumberOfEnemies();
 }

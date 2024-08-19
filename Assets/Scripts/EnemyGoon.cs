@@ -26,10 +26,12 @@ public class EnemyGoon : Enemy
 
     IEnumerator ShootGuns()
     {
-        yield return StartCoroutine(_gun.ShootThenWait(3, 0.2f));
+        yield return StartCoroutine(_gun.ShootBurstCoroutine(3, 0.2f));
     }
 
     IEnumerator CombatActions() {
+        // Shoot 3 bursts of 3 shots.
+
         yield return StartCoroutine(flightEnterCoroutine);
 
         yield return StartCoroutine(ShootGuns());

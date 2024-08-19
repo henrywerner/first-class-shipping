@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Level01Wave02 : IState
+public class Level01Wave02 : ILevelState
 {
     private FsmLevel01 _gameState;
     public Enemy[] _enemies { get; private set; }
@@ -15,19 +15,30 @@ public class Level01Wave02 : IState
     public void Enter()
     {
         Debug.Log("Start Wave 1 - 2");
-
-        EventManager.current.OnEnemyKilled += EnemyDown;
-
+        EventManager.current.OnEnemyDispatched += EnemyDown;
         _gameState.waveContainers[1].SetActive(true);
 
-        _gameState.SpawnEnemyAfterSeconds(_enemies[0], 0f);
-
-        // _gameState.StartWaveAfterSeconds(11f);
+        try
+        {
+            _gameState.SpawnEnemyAfterSeconds(_enemies[0], 0f);
+            _gameState.SpawnEnemyAfterSeconds(_enemies[1], 3f);
+            _gameState.SpawnEnemyAfterSeconds(_enemies[2], 8f);
+        }
+        catch (System.Exception)
+        {
+            Debug.Log("Wave 2 doesn't have all of its expected enemies");
+            throw;
+        }
     }
 
     private void EnemyDown()
     {
         enemiesKilled++;
+
+        if (enemiesKilled == 1) {
+            // _gameState.SpawnEnemyAfterSeconds(_enemies[1], 0f);
+        }
+
         if (enemiesKilled == _enemies.Length)
         {
             _gameState.NextWave();
@@ -36,7 +47,7 @@ public class Level01Wave02 : IState
 
     public void Exit()
     {
-        EventManager.current.OnEnemyKilled -= EnemyDown;
+        EventManager.current.OnEnemyDispatched -= EnemyDown;
     }
 
     public void FixedTick()
@@ -47,5 +58,10 @@ public class Level01Wave02 : IState
     public void Tick()
     {
 
+    }
+
+    public int GetNumberOfEnemies()
+    {
+        return _enemies.Length;
     }
 }
