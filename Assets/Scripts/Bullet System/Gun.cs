@@ -26,16 +26,16 @@ public abstract class Gun : MonoBehaviour, IShootable
     {
         if (!_isOnCooldown)
         {
-            StartCoroutine(ShootThenWait(1, rate));
+            StartCoroutine(ShootBurstCoroutine(1, rate));
             _isOnCooldown = true;
         }
     }
 
-    public virtual void ShootMultipleTimes(int amountOfTimes, float rate) {
-        StartCoroutine(ShootThenWait(amountOfTimes, rate));
+    public virtual void ShootBurst(int amountOfTimes, float rate) {
+        StartCoroutine(ShootBurstCoroutine(amountOfTimes, rate));
     }
 
-    public IEnumerator ShootThenWait(int amountOfTimes, float waitTime) {
+    public IEnumerator ShootBurstCoroutine(int amountOfTimes, float waitTime) {
         for (int i = 0; i < amountOfTimes; i++)
         {
             this.Shoot();

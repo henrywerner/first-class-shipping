@@ -4,12 +4,12 @@ using UnityEngine;
 
 public abstract class StateMachine : MonoBehaviour
 {
-    public IState CurrentState { get; private set; }
-    public IState _previousState;
+    public ILevelState CurrentState { get; private set; }
+    public ILevelState _previousState;
 
     private bool _inTransition = false;
     
-    public void ChangeState(IState newState)
+    public void ChangeState(ILevelState newState)
     {
         if (CurrentState == newState || _inTransition)
             return;
@@ -23,7 +23,7 @@ public abstract class StateMachine : MonoBehaviour
             ChangeState(_previousState);
     }
 
-    private void ChangeStateSequence(IState newState)
+    private void ChangeStateSequence(ILevelState newState)
     {
         _inTransition = true;
         // begin our exit sequence, to prepare for new state

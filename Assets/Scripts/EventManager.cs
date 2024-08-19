@@ -25,11 +25,11 @@ public class EventManager : MonoBehaviour
         current = this;
     }
 
-    public event Action OnEnemyKilled;
+    public event Action OnEnemyDispatched;
 
-    public void EnemyKilled()
+    public void EnemyDispatched()
     {
-        OnEnemyKilled?.Invoke();
+        OnEnemyDispatched?.Invoke();
     }
 
     public event Action<float, float> OnScreenShake;

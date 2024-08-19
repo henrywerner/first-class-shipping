@@ -17,25 +17,19 @@ public class EnemyTrident : Enemy
     }
 
     IEnumerator ShootGuns() {
-        yield return StartCoroutine(_gun.ShootThenWait(5, 0.2f));
-        yield return new WaitForSecondsRealtime(0.3f);
-        yield return StartCoroutine(_gun.ShootThenWait(5, 0.2f));
+        yield return StartCoroutine(_gun.ShootBurstCoroutine(5, 0.2f));
+        yield return new WaitForSecondsRealtime(0.6f);
+        yield return StartCoroutine(_gun.ShootBurstCoroutine(5, 0.2f));
+        yield return new WaitForSecondsRealtime(0.6f);
+        yield return StartCoroutine(_gun.ShootBurstCoroutine(5, 0.2f));
+        yield return new WaitForSecondsRealtime(0.6f);
     }
 
     IEnumerator CombatActions() {
+
         yield return StartCoroutine(flightEnterCoroutine);
 
         yield return StartCoroutine(ShootGuns());
-
-        yield return new WaitForSecondsRealtime(1f);
-
-        yield return StartCoroutine(ShootGuns());
-
-        yield return new WaitForSecondsRealtime(1f);
-
-        yield return StartCoroutine(ShootGuns());
-
-        yield return new WaitForSecondsRealtime(1f);
 
         yield return StartCoroutine(flightLeaveCoroutine);
 

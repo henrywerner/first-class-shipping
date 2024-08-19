@@ -1,13 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
-public class Level01Wave01 : ILevelState
+public class Level01Wave03 : ILevelState
 {
     private FsmLevel01 _gameState;
     public Enemy[] _enemies { get; private set; }
     private int enemiesKilled;
 
-    public Level01Wave01(FsmLevel01 gameStateFsm, Enemy[] enemies) {
+    public Level01Wave03(FsmLevel01 gameStateFsm, Enemy[] enemies) {
         _gameState = gameStateFsm;
         _enemies = enemies;
         enemiesKilled = 0;
@@ -15,36 +15,29 @@ public class Level01Wave01 : ILevelState
 
     public void Enter()
     {
-        Debug.Log("Start Wave 1 - 1");
+        Debug.Log("Start Wave 1 - 3");
         EventManager.current.OnEnemyDispatched += EnemyDown;
-        _gameState.waveContainers[0].SetActive(true);
-
-        if (_enemies.Length == 0) {
-            Debug.Log("Enemies:" + _enemies.Length);
-            return;
-        }
+        _gameState.waveContainers[2].SetActive(true);
         
         try
         {
             _gameState.SpawnEnemyAfterSeconds(_enemies[0], 0f);
             _gameState.SpawnEnemyAfterSeconds(_enemies[1], 0f);
+            _gameState.SpawnEnemyAfterSeconds(_enemies[2], 0f);
+            _gameState.SpawnEnemyAfterSeconds(_enemies[3], 0f);
 
-            _gameState.SpawnEnemyAfterSeconds(_enemies[2], 7.5f);
-            _gameState.SpawnEnemyAfterSeconds(_enemies[3], 7.5f);
-            _gameState.SpawnEnemyAfterSeconds(_enemies[4], 7.5f);
+            _gameState.SpawnEnemyAfterSeconds(_enemies[4], 7f);
+            _gameState.SpawnEnemyAfterSeconds(_enemies[5], 7f);
 
-            _gameState.SpawnEnemyAfterSeconds(_enemies[5], 14f);
-            _gameState.SpawnEnemyAfterSeconds(_enemies[6], 14f);
-            _gameState.SpawnEnemyAfterSeconds(_enemies[7], 14f);
-            _gameState.SpawnEnemyAfterSeconds(_enemies[8], 14f);
+            _gameState.SpawnEnemyAfterSeconds(_enemies[6], 12f);
+            _gameState.SpawnEnemyAfterSeconds(_enemies[7], 12f);
         }
         catch (System.Exception)
         {
-            Debug.Log("Wave 1 doesn't have all of its expected enemies");
+            Debug.Log("Wave 3 doesn't have all of its expected enemies");
             throw;
         }
        
-        // _gameState.StartWaveAfterSeconds(20f);
     }
 
     private void EnemyDown()

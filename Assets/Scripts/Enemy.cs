@@ -32,6 +32,7 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void Remove()
     {
         gameObject.SetActive(false);
+        EventManager.current.EnemyDispatched();
     }
     
 }

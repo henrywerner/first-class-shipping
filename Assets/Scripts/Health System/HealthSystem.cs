@@ -26,6 +26,7 @@ public abstract class HealthSystem : MonoBehaviour, IDamageable
 
     public virtual void Kill()
     {
+        _canBeHurt = false;
         AudioController.controller.PlaySFX(_deathSFX, transform.position);
         //gameObject.SetActive(false);
         var destoryObj = transform.parent != null && transform.parent.gameObject.tag == "Enemy" ? transform.parent.gameObject : gameObject;
