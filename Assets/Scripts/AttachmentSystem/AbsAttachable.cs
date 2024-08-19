@@ -11,6 +11,7 @@ public abstract class AbsAttachable : MonoBehaviour
     public AbsAttachable ParrentAttachment = null;
     [SerializeField] float detatchCooldown = 0.5f;
     [SerializeField] GameObject attachSFX;
+    private bool _hasDetached = false;
 
     public static event Action OnAttachmentsUpdate;
 
@@ -19,8 +20,24 @@ public abstract class AbsAttachable : MonoBehaviour
         OnAttachmentsUpdate?.Invoke();
     }
 
+    private void FixedUpdate()
+    {
+        if (_hasDetached)
+        {
+            Vector3 cameraBounds = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0));
+            float boundsX = cameraBounds.x - (transform.lossyScale.x * 0.5f);
+            float boundsY = cameraBounds.y - (transform.lossyScale.y * 0.5f);
+            if (this.transform.position.x < -boundsX - 1 || this.transform.position.x > boundsX + 1
+                || this.transform.position.y < -boundsY - 1 || this.transform.position.y > boundsY + 1)
+            {
+                this.gameObject.SetActive(false);
+            }
+        }
+    }
+
     public void AttachTo(AbsAttachable argParentAttachment)
     {
+        _hasDetached = false;
         PickupDrifting drift = this.GetComponent<PickupDrifting>();
         if (drift != null)
         {
@@ -40,13 +57,19 @@ public abstract class AbsAttachable : MonoBehaviour
         AttachmentsUpdate();
     }
 
-    public void DetachWithSpeed()
+    public void DetachWithForce()
     {
         float random = UnityEngine.Random.Range(0f, 260f);
-        DetachWithSpeed(new Vector2(Mathf.Cos(random), Mathf.Sin(random)) * 100);
+        DetachWithForce(new Vector2(Mathf.Cos(random), Mathf.Sin(random)) * 100);
     }
 
-    public void DetachWithSpeed(Vector2 argForce)
+    public void DetachWithForce(float forceMagnitude)
+    {
+        float random = UnityEngine.Random.Range(0f, 260f);
+        DetachWithForce(new Vector2(Mathf.Cos(random), Mathf.Sin(random)) * forceMagnitude);
+    }
+
+    public void DetachWithForce(Vector2 argForce)
     {
         if (ParrentAttachment != null) //already detatched
         {
@@ -62,6 +85,7 @@ public abstract class AbsAttachable : MonoBehaviour
 
     virtual public void Detach()
     {
+        _hasDetached = true;
         this.transform.parent = null;
         ParrentAttachment.NextAttachment = null;
         ParrentAttachment = null;
@@ -100,5 +124,12 @@ public abstract class AbsAttachable : MonoBehaviour
             //Debug.Log("Collided with " + other.gameObject.name);
             other.gameObject.GetComponent<PlayerController>().AttachComponent(this);
         }
+
+        if (this.ParrentAttachment == null && (other.gameObject.tag == "Friendly" || other.gameObject.tag == "Enemy")) // this is not attached
+        {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.collider.gameObject.GetComponent<Collider2D>());
+            return;
+        }
+
     }
 }
