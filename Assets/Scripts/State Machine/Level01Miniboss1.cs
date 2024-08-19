@@ -1,13 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
-public class Level01Wave05 : ILevelState
+public class Level01Miniboss1 : ILevelState
 {
     private FsmLevel01 _gameState;
     public Enemy[] _enemies { get; private set; }
     private int enemiesKilled;
 
-    public Level01Wave05(FsmLevel01 gameStateFsm, Enemy[] enemies) {
+    public Level01Miniboss1(FsmLevel01 gameStateFsm, Enemy[] enemies) {
         _gameState = gameStateFsm;
         _enemies = enemies;
         enemiesKilled = 0;
@@ -15,17 +15,13 @@ public class Level01Wave05 : ILevelState
 
     public void Enter()
     {
-        Debug.Log("Start Wave 1 - 5");
+        Debug.Log("Start Wave Miniboss");
         EventManager.current.OnEnemyDispatched += EnemyDown;
-        _gameState.waveContainers[5].SetActive(true);
+        _gameState.waveContainers[3].SetActive(true);
         
         try
         {
             _gameState.SpawnEnemyAfterSeconds(_enemies[0], 0f);
-            _gameState.SpawnEnemyAfterSeconds(_enemies[1], 0f);
-
-            _gameState.SpawnEnemyAfterSeconds(_enemies[2], 7f);
-            _gameState.SpawnEnemyAfterSeconds(_enemies[3], 7f);
         }
         catch (System.Exception)
         {
