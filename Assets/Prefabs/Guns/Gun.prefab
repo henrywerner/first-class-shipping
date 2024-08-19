@@ -217,6 +217,7 @@ MonoBehaviour:
   ParrentAttachment: {fileID: 0}
   detatchCooldown: 0.5
   attachSFX: {fileID: 4792592769389947601, guid: eb8e61fa0af1ea242b47b3dafd662d16, type: 3}
+  attachVFX: {fileID: 288663964995989566, guid: c733d23b40ab12f49bb14ce813a96f9a, type: 3}
 --- !u!114 &4746277802477954699
 MonoBehaviour:
   m_ObjectHideFlags: 0
