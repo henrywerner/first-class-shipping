@@ -6,6 +6,7 @@ using UnityEngine;
 public class AttachmentDamageable : MonoBehaviour, IDamageable
 {
     [SerializeField] GameObject hitSFX;
+    [SerializeField] float DetachForce = 100f;
 
     public void Damage(int damage)
     {
@@ -15,6 +16,6 @@ public class AttachmentDamageable : MonoBehaviour, IDamageable
 
     public void Kill()
     {
-        GetComponent<AbsAttachable>().FindTail().DetachWithSpeed();
+        GetComponent<AbsAttachable>().FindTail().DetachWithForce(DetachForce);
     }
 }
