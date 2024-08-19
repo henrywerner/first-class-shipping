@@ -42,7 +42,7 @@ public class LivesManager : MonoBehaviour
         }
         else
         {
-            // Start fail state
+            IngameMenuManager.current.ShowDeathScreen();
         }
     }
 
