@@ -358,6 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSFX: {fileID: 0}
+  DetachForce: 100
 --- !u!1 &64519382
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +488,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3179031399166188127, guid: 9f1f43a15937bf14583ad991f90191fb, type: 3}
   m_PrefabInstance: {fileID: 161759409}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &198380691
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 288663964995989566, guid: c733d23b40ab12f49bb14ce813a96f9a, type: 3}
+      propertyPath: m_Name
+      value: GunGraft VFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219138397627490135, guid: c733d23b40ab12f49bb14ce813a96f9a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219138397627490135, guid: c733d23b40ab12f49bb14ce813a96f9a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219138397627490135, guid: c733d23b40ab12f49bb14ce813a96f9a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219138397627490135, guid: c733d23b40ab12f49bb14ce813a96f9a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219138397627490135, guid: c733d23b40ab12f49bb14ce813a96f9a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219138397627490135, guid: c733d23b40ab12f49bb14ce813a96f9a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219138397627490135, guid: c733d23b40ab12f49bb14ce813a96f9a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219138397627490135, guid: c733d23b40ab12f49bb14ce813a96f9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219138397627490135, guid: c733d23b40ab12f49bb14ce813a96f9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219138397627490135, guid: c733d23b40ab12f49bb14ce813a96f9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c733d23b40ab12f49bb14ce813a96f9a, type: 3}
 --- !u!1 &208607698
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSFX: {fileID: 0}
+  DetachForce: 100
 --- !u!1 &272507650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1154,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622854380}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 982d719a13c52884b955d155f239df57, type: 3}
   m_Name: 
@@ -1218,6 +1277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSFX: {fileID: 0}
+  DetachForce: 100
 --- !u!1001 &774353183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2099,6 +2159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSFX: {fileID: 0}
+  DetachForce: 100
 --- !u!1 &1574874465
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,10 +2471,6 @@ PrefabInstance:
     - target: {fileID: 3453984091919103747, guid: 3e6879e47a6cd694288ca90b97409596, type: 3}
       propertyPath: m_Name
       value: Gun
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746277802477954699, guid: 3e6879e47a6cd694288ca90b97409596, type: 3}
-      propertyPath: shootSFXObj
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7986548631084027962, guid: 3e6879e47a6cd694288ca90b97409596, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3223,6 +3280,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Destroy VFX
       objectReference: {fileID: 0}
+    - target: {fileID: 288663964995989566, guid: 9656d05ddd5b22d4a859a18a8a69dfd5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6219138397627490135, guid: 9656d05ddd5b22d4a859a18a8a69dfd5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.72
@@ -3351,3 +3412,4 @@ SceneRoots:
   - {fileID: 405166527}
   - {fileID: 208607699}
   - {fileID: 2117191955822815037}
+  - {fileID: 198380691}
