@@ -17,7 +17,7 @@ public class Level01Wave04 : ILevelState
     {
         Debug.Log("Start Wave 1 - 4");
         EventManager.current.OnEnemyDispatched += EnemyDown;
-        _gameState.waveContainers[3].SetActive(true);
+        _gameState.waveContainers[4].SetActive(true);
         
         try
         {
