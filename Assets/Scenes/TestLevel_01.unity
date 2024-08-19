@@ -711,7 +711,7 @@ PrefabInstance:
     - target: {fileID: 45246451648144890, guid: 14248effeac227e45b201f4afb5c7f62, type: 3}
       propertyPath: _pauseMenuCanvas
       value: 
-      objectReference: {fileID: 226933105}
+      objectReference: {fileID: 918956014}
     - target: {fileID: 45246451648144890, guid: 14248effeac227e45b201f4afb5c7f62, type: 3}
       propertyPath: _winScreenCanvas
       value: 
