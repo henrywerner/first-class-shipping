@@ -256,4 +256,9 @@ public class PlayerController : MonoBehaviour
             return null;
         }
     }
+
+    public int GetGunCount()
+    {
+        return _gunList.Count;
+    }
 }

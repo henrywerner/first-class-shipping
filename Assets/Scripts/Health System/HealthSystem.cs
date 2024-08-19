@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class HealthSystem : MonoBehaviour, IDamageable
 {
-    [SerializeField] int maxHp;
-    [SerializeField] int currentHp;
+    [SerializeField] protected int maxHp;
+    [SerializeField] protected int currentHp;
     [SerializeField] float hurtBufferTime = 0f;
     public bool CanBeHurt { get => _canBeHurt; set => _canBeHurt = value; }
     private bool _canBeHurt;
@@ -21,7 +21,7 @@ public abstract class HealthSystem : MonoBehaviour, IDamageable
 
     public event Action WasKilled;
 
-    public void Awake()
+    public virtual void Awake()
     {
         currentHp = maxHp;
         _canBeHurt = true;
