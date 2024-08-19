@@ -326,6 +326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a8f1bdd77551b448cafd6450aee6d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSFX: {fileID: 0}
+  DetachForce: 400
 --- !u!1 &5452063110109507369
 GameObject:
   m_ObjectHideFlags: 0

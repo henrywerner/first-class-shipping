@@ -3,13 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Gun))]
-public class EnemyGoon : Enemy
+public class EnemyEliteGoon : Enemy
 {
+    [SerializeField] private GameObject _gunNode;
+
     private IEnumerator flightEnterCoroutine, flightLeaveCoroutine;
     void Start()
     {
         flightEnterCoroutine = _pathMover.MoveAlongPath(_paths[0], _pathSpeedModifier, gameObject);
         flightLeaveCoroutine = _pathMover.MoveAlongPath(_paths[1], _pathSpeedModifier, gameObject);
+    }
+
+    private void FixedUpdate()
+    {
+        Vector3 direction = FindObjectOfType<PlayerController>().gameObject.transform.position - _gunNode.transform.position;
+        _gunNode.transform.rotation = Quaternion.FromToRotation(Vector3.up, direction);
     }
 
     public override void StartMoving()
@@ -20,18 +28,16 @@ public class EnemyGoon : Enemy
         }
         catch
         {
-            Debug.LogWarning($"Coroutine failed to start in EnemyGoon.");
+            Debug.LogWarning($"Coroutine failed to start on {gameObject.name}");
         }
     }
 
     IEnumerator ShootGuns()
     {
-        yield return StartCoroutine(_gun.ShootBurstCoroutine(3, 0.2f));
+        yield return StartCoroutine(_gun.ShootThenWait(5, 0.2f));
     }
 
     IEnumerator CombatActions() {
-        // Shoot 3 bursts of 3 shots.
-
         yield return StartCoroutine(flightEnterCoroutine);
 
         yield return StartCoroutine(ShootGuns());

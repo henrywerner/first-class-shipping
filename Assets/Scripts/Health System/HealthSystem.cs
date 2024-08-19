@@ -17,6 +17,7 @@ public abstract class HealthSystem : MonoBehaviour, IDamageable
     [Header("VFX")]
     [SerializeField] GameObject _hitSprite;
     [SerializeField] float flashSeconds = 0.1f;
+    [SerializeField] GameObject _destroyVFX;
 
     public void Awake()
     {
@@ -28,7 +29,12 @@ public abstract class HealthSystem : MonoBehaviour, IDamageable
     {
         _canBeHurt = false;
         AudioController.controller.PlaySFX(_deathSFX, transform.position);
-        //gameObject.SetActive(false);
+
+        if (_destroyVFX != null)
+        {
+            Instantiate(_destroyVFX, transform.position, transform.rotation);
+        }
+
         var destoryObj = transform.parent != null && transform.parent.gameObject.tag == "Enemy" ? transform.parent.gameObject : gameObject;
         Destroy(destoryObj);
     }

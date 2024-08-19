@@ -211,7 +211,7 @@ public class PlayerController : MonoBehaviour
         if (throwingGun != null)
         {
             Vector2 detachForce = detatchDirection * detachSpeed;
-            throwingGun.DetachWithSpeed(detachForce);
+            throwingGun.DetachWithForce(detachForce);
             detachedSuccess = true;
         }
 

@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7792963345027922705}
-  - component: {fileID: 1690661895575067281}
+  - component: {fileID: 4243511391693751314}
   - component: {fileID: 3846470686131449857}
   - component: {fileID: 299475896125611995}
   - component: {fileID: 254740358063986995}
@@ -105,7 +105,7 @@ Transform:
   - {fileID: 6044947203306212191}
   m_Father: {fileID: 8916668255420780995}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1690661895575067281
+--- !u!114 &4243511391693751314
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7191569651747613436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 447d671e59ed9a64aadcb9f39a4de9de, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b3e4fee5e396f94b87bf6e00fcdb629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _paths:
@@ -125,6 +125,7 @@ MonoBehaviour:
   _parentObject: {fileID: 9180191369230775973}
   ScreenShakeDuration: 0.1
   ScreenShakeMagnitude: 0.1
+  _gunNode: {fileID: 3737329765246377273}
 --- !u!114 &3846470686131449857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +226,6 @@ MonoBehaviour:
   _deathSFX: {fileID: 4792592769389947601, guid: a352da12388e0d04793f1e98d0de76d5, type: 3}
   _hitSprite: {fileID: 2745692232161112648}
   flashSeconds: 0.05
-  _destroyVFX: {fileID: 288663964995989566, guid: 9656d05ddd5b22d4a859a18a8a69dfd5, type: 3}
 --- !u!61 &8054645485590633035
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -359,7 +359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8916668255420780995}
   m_Layer: 0
-  m_Name: Enemy Goon
+  m_Name: Enemy Elite Goon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
