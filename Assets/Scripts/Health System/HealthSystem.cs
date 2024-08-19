@@ -19,6 +19,8 @@ public abstract class HealthSystem : MonoBehaviour, IDamageable
     [SerializeField] float flashSeconds = 0.1f;
     [SerializeField] GameObject _destroyVFX;
 
+    public event Action WasKilled;
+
     public void Awake()
     {
         currentHp = maxHp;
@@ -34,6 +36,8 @@ public abstract class HealthSystem : MonoBehaviour, IDamageable
         {
             Instantiate(_destroyVFX, transform.position, transform.rotation);
         }
+
+        WasKilled?.Invoke();
 
         var destoryObj = transform.parent != null && transform.parent.gameObject.tag == "Enemy" ? transform.parent.gameObject : gameObject;
         Destroy(destoryObj);

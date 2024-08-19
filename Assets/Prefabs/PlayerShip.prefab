@@ -198,7 +198,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 398675216515875223}
@@ -287,14 +287,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e07c7fdca0d9f43a917bd3bd6fb866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 5
-  currentHp: 5
+  maxHp: 1
+  currentHp: 1
   hurtBufferTime: 0.2
   _hitSFX: {fileID: 0}
   _deathSFX: {fileID: 4792592769389947601, guid: 899fab919a9808e4c8fe2067f84f0486, type: 3}
   _hitSprite: {fileID: 0}
   flashSeconds: 0.1
-  _destroyVFX: {fileID: 0}
+  _destroyVFX: {fileID: 288663964995989566, guid: 9656d05ddd5b22d4a859a18a8a69dfd5, type: 3}
 --- !u!50 &6451149039655587727
 Rigidbody2D:
   serializedVersion: 4
