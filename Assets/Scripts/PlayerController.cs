@@ -172,6 +172,10 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Dodge this!");
                 // Set invul
                 _healthSystem.SetTempInvul(_dodgeInvulTime);
+                foreach(var gun in _gunList)
+                {
+                    gun.GetComponent<AttachmentDamageable>()?.SetTempInvul(_dodgeInvulTime);
+                }
                 // Show dodge visuals and play sfx
                 _dodgeSprite?.SetActive(true);
                 AudioController.controller.PlaySFX(_dodgeSFX, transform.position);
