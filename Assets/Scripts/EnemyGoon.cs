@@ -20,7 +20,7 @@ public class EnemyGoon : Enemy
         }
         catch
         {
-            Debug.LogWarning($"Coroutine failed to start on {gameObject.name}");
+            Debug.LogWarning($"Coroutine failed to start in EnemyGoon.");
         }
     }
 

@@ -11,6 +11,9 @@ public class Bullet : MonoBehaviour
     [SerializeField] public bool isEnemy = true;
     [SerializeField] float _despawnTime = 3f;
 
+    [Header("VFX")]
+    [SerializeField] GameObject _hitFX;
+
     float _startTime;
 
     private void Awake()
@@ -70,8 +73,11 @@ public class Bullet : MonoBehaviour
 
     private void Feedback()
     {
-        // TODO: add hit FX here.
- 
+        if (_hitFX != null)
+        {
+            Instantiate(_hitFX, transform.position, transform.rotation);
+        }
+
         Destroy(gameObject);
     }
 

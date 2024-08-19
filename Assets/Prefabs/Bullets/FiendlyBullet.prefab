@@ -134,6 +134,7 @@ MonoBehaviour:
   _damage: 1
   isEnemy: 0
   _despawnTime: 3
+  _hitFX: {fileID: 288663964995989566, guid: b04c816639ec82f47a8534a3627a2a6a, type: 3}
 --- !u!70 &3909267562233782339
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

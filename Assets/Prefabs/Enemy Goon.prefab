@@ -225,6 +225,7 @@ MonoBehaviour:
   _deathSFX: {fileID: 4792592769389947601, guid: a352da12388e0d04793f1e98d0de76d5, type: 3}
   _hitSprite: {fileID: 2745692232161112648}
   flashSeconds: 0.05
+  _destroyVFX: {fileID: 288663964995989566, guid: 9656d05ddd5b22d4a859a18a8a69dfd5, type: 3}
 --- !u!61 &8054645485590633035
 BoxCollider2D:
   m_ObjectHideFlags: 0
