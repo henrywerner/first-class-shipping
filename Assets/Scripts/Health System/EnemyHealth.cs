@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class EnemyHealth : HealthSystem
 {
+    [SerializeField] bool _useHealthScaling = true;
+
+    public override void Awake()
+    {
+        base.Awake();
+        if (_useHealthScaling )
+        {
+            currentHp = ((FindObjectOfType<PlayerController>().GetGunCount() / 4) + 1) * maxHp;
+        }
+    }
+
     public override void Kill()
     {
         Enemy enemy = GetComponent<Enemy>();
