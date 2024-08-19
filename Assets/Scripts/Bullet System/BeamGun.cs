@@ -26,14 +26,14 @@ public class BeamGun : Gun
 
     public override void Fire()
     {
-        ShootWithCooldown();
+        ShootWithCooldown(BeamCoolDown);
     }
 
-    public void ShootWithCooldown()
+    public override void ShootWithCooldown(float WaitTime)
     {
         if (!_isOnCooldown)
         {
-            StartCoroutine(ShootThenWait());
+            StartCoroutine(ShootThenWait(WaitTime));
             _isOnCooldown = true;
         }
     }
@@ -60,13 +60,13 @@ public class BeamGun : Gun
         DeactivateAllBeams();
     }
 
-    public IEnumerator ShootThenWait()
+    public IEnumerator ShootThenWait(float WaitTime)
     {
         this.Shoot();
 
         yield return StartCoroutine(DeavtivateAfterDuration());
 
-        yield return new WaitForSeconds(BeamCoolDown);
+        yield return new WaitForSeconds(WaitTime);
         _isOnCooldown = false;
     }
 
