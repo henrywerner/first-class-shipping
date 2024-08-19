@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class PlayerHealth : HealthSystem
 {
-  
+    public override void Kill()
+    {
+        gameObject.GetComponent<PlayerController>()?.DetachAllGunsWithForce();
+        base.Kill();
+    }
 }

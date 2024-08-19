@@ -85,10 +85,15 @@ public abstract class AbsAttachable : MonoBehaviour
 
             rb2d.AddForce(argForce);
             rb2d.AddTorque(UnityEngine.Random.Range(-8, 8), ForceMode2D.Impulse);
+
+            if (NextAttachment != null)
+            {
+                NextAttachment.DetachWithForce(argForce);
+            }
         }
     }
 
-    virtual public void Detach()
+    virtual protected void Detach()
     {
         _hasDetached = true;
         this.transform.parent = null;
@@ -97,12 +102,18 @@ public abstract class AbsAttachable : MonoBehaviour
 
         StartCoroutine(DisableCollionsForSeconds(detatchCooldown));
 
+        AttachmentsUpdate();
+    }
+
+    virtual public void DetachAllConnected()
+    {
+        Detach();
+
         if (NextAttachment != null)
         {
-            NextAttachment.Detach();
+            NextAttachment.DetachAllConnected();
         }
 
-        AttachmentsUpdate();
     }
     
     IEnumerator DisableCollionsForSeconds(float seconds)
@@ -130,7 +141,7 @@ public abstract class AbsAttachable : MonoBehaviour
             other.gameObject.GetComponent<PlayerController>().AttachComponent(this);
         }
 
-        if (this.ParrentAttachment == null && (other.gameObject.tag == "Friendly" || other.gameObject.tag == "Enemy")) // this is not attached
+        if (this.ParrentAttachment == null && (other.gameObject.tag == "Friendly" || other.gameObject.tag == "Enemy")) // if this is not attached, don't collide with bullets
         {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.collider.gameObject.GetComponent<Collider2D>());
             return;
