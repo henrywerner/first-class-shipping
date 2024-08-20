@@ -376,6 +376,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 373226439020471441, guid: f6cef5595a9a78a4dbf93c329f949dee, type: 3}
+      propertyPath: BeamDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4914390969645223833, guid: f6cef5595a9a78a4dbf93c329f949dee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.89

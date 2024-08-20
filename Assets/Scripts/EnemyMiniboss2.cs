@@ -55,6 +55,7 @@ public class EnemyMiniboss2 : Enemy
     IEnumerator MoveToPositionOneAndThenShootBeam()
     {
         yield return StartCoroutine(_pathMover.MoveAlongPath(_paths[0], _pathSpeedModifier, gameObject)); // Move into pos 1
+        yield return StartCoroutine(_beamGun.WarningBeams());
         _beamGun.Shoot();
     }
 
@@ -66,6 +67,8 @@ public class EnemyMiniboss2 : Enemy
         Transform[] p = {_paths[1], _paths[2]};
 
         yield return StartCoroutine(_pathMover.MoveAlongAllPaths(p, _pathSpeedModifier, gameObject)); // Exit pos 1, then enter pos 2
+
+        yield return StartCoroutine(_beamGun.WarningBeams());
 
         _beamGun.Shoot();
     }

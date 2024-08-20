@@ -890,7 +890,7 @@ MonoBehaviour:
   _bullet: {fileID: 7723282652460130139, guid: b4b18385654ed0145bf96271bfd59cff, type: 3}
   _nodes:
   - {fileID: 2702638765820737134}
-  shootSFXObj: {fileID: 4792592769389947601, guid: 8b8b1142f5f40994c9113008c644833d, type: 3}
+  shootSFXObj: {fileID: 4792592769389947601, guid: 1e6ac5b06f03e2143b8e64420c9b3276, type: 3}
   BeamDuration: 3
   BeamCoolDown: 0
   BeamWidth: 2
