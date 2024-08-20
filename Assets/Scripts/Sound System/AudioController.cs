@@ -6,6 +6,9 @@ using UnityEngine.Audio;
 public class AudioController : MonoBehaviour
 {
     public static AudioController controller;
+    [SerializeField] AudioMixerGroup masterMixerGroup;
+    [SerializeField] AudioMixerGroup sfxMixerGroup;
+    [SerializeField] AudioMixerGroup musicMixerGroup;
     Dictionary<GameObject, GameObject> spawnSFXLocks = new Dictionary<GameObject, GameObject>();
 
     private void Awake()
@@ -28,10 +31,30 @@ public class AudioController : MonoBehaviour
         }
     }
 
-    public void SetVolume(AudioMixerGroup mixerGroup, float volume)
+    public void SetVolume(string name, float volume)
     {
-        //I know there is extra math to be done on having the volume adjust properly, but I'll find that later, this will work.
-        mixerGroup.audioMixer.SetFloat("Volume", volume);
+        if (volume > 0)
+        {
+            masterMixerGroup.audioMixer.SetFloat(name, Mathf.Log10(volume) * 20);
+        }
+        else
+        {
+            masterMixerGroup.audioMixer.SetFloat(name, -80);
+        }
+    }
+    public void SetMasterVolume(float volume)
+    {
+        SetVolume("MasterVolume", volume / 100);
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        SetVolume("SFXVolume", volume / 100);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        SetVolume("MusicVolume", volume / 100);
     }
 
     public void PlaySFXWithLock(GameObject sfxPrefab, Vector3 pos)
