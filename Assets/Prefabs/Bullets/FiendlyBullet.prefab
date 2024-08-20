@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5038151817151236340
+--- !u!1 &3579684791038135061
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7637436871579422956}
-  - component: {fileID: 3558759719450091948}
+  - component: {fileID: 4336575608220377195}
+  - component: {fileID: 4623891498023931170}
   m_Layer: 6
-  m_Name: Circle
+  m_Name: BulletSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7637436871579422956
+--- !u!4 &4336575608220377195
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5038151817151236340}
+  m_GameObject: {fileID: 3579684791038135061}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 15038736922523592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3558759719450091948
+--- !u!212 &4623891498023931170
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5038151817151236340}
+  m_GameObject: {fileID: 3579684791038135061}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,9 +72,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -205856266, guid: a42b668df4ef9a34f8dcd3ae51676369, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.50179243, a: 1}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -942094863, guid: 0a466ec04b5abd14c87406c1101ff004, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -115,7 +115,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7637436871579422956}
+  - {fileID: 4336575608220377195}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9146420548800283769
@@ -167,6 +167,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.14, y: 0.38}
+  m_Offset: {x: 0.013247147, y: -0.013207361}
+  m_Size: {x: 0.18268523, y: 0.18268523}
   m_Direction: 0
