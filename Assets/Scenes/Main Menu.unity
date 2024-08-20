@@ -4114,6 +4114,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 157061835002013863, guid: 6b5af56a3756e8f48bf08e4c7db20602, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.055
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762900102489509297, guid: 6b5af56a3756e8f48bf08e4c7db20602, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861051858769445633, guid: 6b5af56a3756e8f48bf08e4c7db20602, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800134456247721842, guid: 6b5af56a3756e8f48bf08e4c7db20602, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7364771713055054890, guid: 6b5af56a3756e8f48bf08e4c7db20602, type: 3}
       propertyPath: m_Name
       value: Background
