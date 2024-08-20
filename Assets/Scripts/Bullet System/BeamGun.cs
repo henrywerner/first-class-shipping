@@ -10,6 +10,12 @@ public class BeamGun : Gun
     [SerializeField] float BeamLerpFrames = 60f;
     private List<GameObject> _activeBeams = new List<GameObject> ();
 
+    [Header("Beam Warning")]
+    [SerializeField] protected GameObject _warningBeam;
+    [SerializeField] float WarningBeamWidth;
+    [SerializeField] float WarningBeamLerpFrames = 30f;
+    [SerializeField] float WarningBeamDuration = 1f;
+
     public override void Shoot()
     {
         if (_activeBeams.Count == 0)
@@ -18,8 +24,8 @@ public class BeamGun : Gun
             {
                 GameObject newBeam = Instantiate(_bullet, node.transform.position, node.transform.rotation);
                 _activeBeams.Add(newBeam);
-                StartCoroutine(WidthLerp(newBeam, 0, BeamWidth));
-                newBeam.transform.parent = this.transform.parent;
+                StartCoroutine(WidthLerp(newBeam, 0, BeamWidth, BeamLerpFrames));
+                newBeam.transform.parent = this.transform;
             }
         }
     }
@@ -46,9 +52,40 @@ public class BeamGun : Gun
         }
     }
 
+    IEnumerator WarningBeams()
+    {
+        // Warning beam VFX / SFX
+
+        // Create warning beams
+        List<GameObject> _activeWarningBeams = new List<GameObject>();
+        foreach (GameObject node in _nodes)
+        {
+            GameObject newWarningBeam = Instantiate(_warningBeam, node.transform.position, node.transform.rotation);
+            _activeWarningBeams.Add(newWarningBeam);
+            StartCoroutine(WidthLerp(newWarningBeam, 0, WarningBeamWidth, WarningBeamLerpFrames));
+            newWarningBeam.transform.parent = this.transform.parent;
+        }
+
+        // wait until beams have lerped
+        for (int i = 0; i < WarningBeamLerpFrames; i++)
+        {
+            yield return new WaitForFixedUpdate();
+        }
+
+        // wait desired amount of time
+        yield return new WaitForSeconds(WarningBeamDuration);
+
+        // delete warning beams
+        foreach (GameObject beam in _activeWarningBeams)
+        {
+            Destroy(beam);
+        }
+        _activeWarningBeams.Clear();
+    }
+
     IEnumerator DeactivateBeam(GameObject beam)
     {
-        yield return StartCoroutine(WidthLerp(beam, BeamWidth, 0));
+        yield return StartCoroutine(WidthLerp(beam, BeamWidth, 0, BeamLerpFrames));
         _activeBeams.Remove(beam);
         Destroy(beam);
     }
@@ -62,6 +99,8 @@ public class BeamGun : Gun
 
     public IEnumerator ShootThenWait(float WaitTime)
     {
+        yield return StartCoroutine(WarningBeams());
+
         this.Shoot();
 
         yield return StartCoroutine(DeavtivateAfterDuration());
@@ -70,7 +109,7 @@ public class BeamGun : Gun
         _isOnCooldown = false;
     }
 
-    IEnumerator WidthLerp(GameObject beam, float StartWidth, float EndWidth)
+    IEnumerator WidthLerp(GameObject beam, float StartWidth, float EndWidth, float Duration)
     {
         Vector3 beamSize = new Vector3(StartWidth, beam.transform.localScale.y, beam.transform.localScale.z);
         beam.transform.localScale = beamSize;
@@ -81,7 +120,7 @@ public class BeamGun : Gun
 
         while (beam.transform.localScale.x != EndWidth)
         {
-            beamSize = Vector3.Lerp(beam.transform.localScale, beamGoal, framesElapsed / BeamLerpFrames);
+            beamSize = Vector3.Lerp(beam.transform.localScale, beamGoal, framesElapsed / Duration);
             beam.transform.localScale = beamSize;
             yield return new WaitForFixedUpdate();
             framesElapsed++;

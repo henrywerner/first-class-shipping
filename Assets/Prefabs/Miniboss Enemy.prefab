@@ -786,6 +786,7 @@ GameObject:
   - component: {fileID: 373226439020471441}
   - component: {fileID: 8509409144862481171}
   - component: {fileID: 3036823459545553687}
+  - component: {fileID: 5646701938887122169}
   m_Layer: 0
   m_Name: Miniboss
   m_TagString: Untagged
@@ -894,6 +895,10 @@ MonoBehaviour:
   BeamCoolDown: 0
   BeamWidth: 2
   BeamLerpFrames: 60
+  _warningBeam: {fileID: 7758249608507404640, guid: 7b2466723be331748813c94692ba3995, type: 3}
+  WarningBeamWidth: 1
+  WarningBeamLerpFrames: 30
+  WarningBeamDuration: 0.5
 --- !u!212 &8509409144862481171
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -997,6 +1002,19 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5646701938887122169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7274663476462670341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb3f4831bc935243a3cc13dd67c4d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Loot: {fileID: 3453984091919103747, guid: 45d778f01b0a1f74496f844da2a9ad41, type: 3}
 --- !u!1 &7626697051977320683
 GameObject:
   m_ObjectHideFlags: 0
