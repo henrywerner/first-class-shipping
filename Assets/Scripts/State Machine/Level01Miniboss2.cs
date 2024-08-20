@@ -96,6 +96,12 @@ public class Level01Miniboss2 : ILevelState
     public void FixedTick()
     {
         if (_enemies[0] == null) {
+            foreach (Enemy e in _enemies)
+            {
+                if (e == null) { continue; } 
+                e.gameObject.GetComponent<IDamageable>()?.Kill();
+            }
+
             _gameState.NextWave();
         }
     }

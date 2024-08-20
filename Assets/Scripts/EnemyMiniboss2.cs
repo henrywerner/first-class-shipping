@@ -67,6 +67,8 @@ public class EnemyMiniboss2 : Enemy
 
         yield return StartCoroutine(_pathMover.MoveAlongAllPaths(p, _pathSpeedModifier, gameObject)); // Exit pos 1, then enter pos 2
 
+        yield return StartCoroutine(_beamGun.WarningBeams());
+
         _beamGun.Shoot();
     }
 

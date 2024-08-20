@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class IngameMenuManager : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class IngameMenuManager : MonoBehaviour
     }
 
     [SerializeField] private GameObject _pauseMenuCanvas, _deathScreenCanvas, _winScreenCanvas;
+    [SerializeField] private Image _fadeToWhite;
 
     public void ShowDeathScreen() 
     {
@@ -72,5 +74,32 @@ public class IngameMenuManager : MonoBehaviour
                 UnpauseGame();
             }
         }
+    }
+
+    public void WinTheGame()
+    {
+        StartCoroutine(EndGameFadeOut(3f));
+    }
+
+    public IEnumerator EndGameFadeOut(float lerpDuration)
+    {
+        float timeElapsed = 0;
+
+        while (timeElapsed < lerpDuration)
+        {
+            // Time.timeScale = Mathf.Lerp(1, 0, timeElapsed / lerpDuration); // Lerp timeScale down
+
+            float colorAlpha = Mathf.Lerp(0, 1, timeElapsed / lerpDuration); // Lerp fade in
+            _fadeToWhite.color = new Color(1, 1, 1, colorAlpha);
+
+            timeElapsed += Time.deltaTime;
+
+            yield return null;
+        }
+
+        // Time.timeScale = 0;
+        _fadeToWhite.color = new Color(1, 1, 1, 1);
+
+        ShowWinScreen();
     }
 }

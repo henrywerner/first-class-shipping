@@ -66,7 +66,7 @@ public class AttachmentDamageable : MonoBehaviour, IDamageable
 
         while (_damageOverlay.GetComponent<SpriteRenderer>().material.color.a != alphaEnd)
         {
-            Debug.Log("alpha value = " + _damageOverlay.GetComponent<SpriteRenderer>().material.color.a);
+            // Debug.Log("alpha value = " + _damageOverlay.GetComponent<SpriteRenderer>().material.color.a);
             _damageOverlay.GetComponent<SpriteRenderer>().material.color = Color.Lerp(startColor, colorGoal, (float) framesElapsed / frames);
             yield return new WaitForFixedUpdate();
             framesElapsed++;

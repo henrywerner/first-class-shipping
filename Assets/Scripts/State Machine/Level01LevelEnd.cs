@@ -12,7 +12,7 @@ public class Level01LevelEnd : ILevelState
     public void Enter()
     {
         Debug.Log("End Level 1");
-        IngameMenuManager.current.ShowWinScreen();
+        IngameMenuManager.current.WinTheGame();
     }
 
     public void Exit()
