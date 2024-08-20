@@ -22,7 +22,7 @@ public class MenuHelper : MonoBehaviour
     }
     
     [SerializeField] private GameObject _buttonPrefab;
-    [SerializeField] private GameObject _creditsCanvas;
+    [SerializeField] private GameObject _creditsCanvas, _optionsCanvas;
 
     private int currentButton;
 
@@ -40,6 +40,14 @@ public class MenuHelper : MonoBehaviour
             }
             else if (Input.GetAxis("Cancel") > 0) {
                 CloseCredits();
+            }
+        }
+        if (_optionsCanvas.activeInHierarchy) {
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                CloseOptions();
+            }
+            else if (Input.GetAxis("Cancel") > 0) {
+                CloseOptions();
             }
         }
     }
@@ -87,7 +95,12 @@ public class MenuHelper : MonoBehaviour
 
     public void OpenOptions()
     {
-        // TODO: Add options
+        _optionsCanvas.SetActive(true);
+    }
+
+    public void CloseOptions()
+    {
+        _optionsCanvas.SetActive(false);
     }
 
     public void OpenCredits()
