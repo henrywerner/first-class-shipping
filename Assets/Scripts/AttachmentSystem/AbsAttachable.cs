@@ -147,6 +147,20 @@ public abstract class AbsAttachable : MonoBehaviour
             other.gameObject.GetComponent<PlayerController>().AttachComponent(this);
         }
 
+        if (other.gameObject.tag == "Enemy") {
+            Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
+            if (rb != null) {
+                float x = rb.velocity.x;
+                float y = rb.velocity.y;
+                float slope = y / x;
+                double dmg = Math.Sqrt(Math.Pow((double)x, 2) + Math.Pow((double)y, 2));
+                dmg = Math.Abs(dmg);
+                int dmgInt = Convert.ToInt32(dmg) * 3; // times 10 because idk
+                Debug.Log("Thrown weapon doing " + dmgInt + " damage on hit");
+                other.gameObject.GetComponent<IDamageable>()?.Damage(dmgInt);
+            }
+        }
+
         if (this.ParrentAttachment == null && (other.gameObject.tag == "Friendly" || other.gameObject.tag == "Enemy")) // if this is not attached, don't collide with bullets
         {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.collider.gameObject.GetComponent<Collider2D>());

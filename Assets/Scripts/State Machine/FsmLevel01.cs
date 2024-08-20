@@ -10,6 +10,7 @@ public class FsmLevel01 : StateMachine
     public Level01Wave04 wave04 { get; private set; }
     public Level01Wave05 wave05 { get; private set; }
     public Level01Miniboss1 miniboss1 { get; private set; }
+    public Level01Miniboss2 miniboss2 { get; private set; }
     public Level01LevelEnd levelEnd { get; private set; }
 
     private Queue<ILevelState> waves = new Queue<ILevelState>();
@@ -18,7 +19,7 @@ public class FsmLevel01 : StateMachine
 
 
     private Enemy[] wave01Enemies, wave02Enemies, wave03Enemies, wave04Enemies, wave05Enemies, wave06Enemies, wave07Enemies, wave08Enemies, wave09Enemies;
-    private Enemy[] miniboss01Enemies;
+    private Enemy[] miniboss01Enemies, miniboss02Enemies;
 
     void Awake()
     {
@@ -28,6 +29,7 @@ public class FsmLevel01 : StateMachine
         miniboss01Enemies = waveContainers[3].GetComponentsInChildren<Enemy>();
         wave04Enemies = waveContainers[4].GetComponentsInChildren<Enemy>();
         wave05Enemies = waveContainers[5].GetComponentsInChildren<Enemy>();
+        miniboss02Enemies = waveContainers[6].GetComponentsInChildren<Enemy>();
 
         wave01 = new Level01Wave01(this, wave01Enemies);
         wave02 = new Level01Wave02(this, wave02Enemies);
@@ -35,6 +37,7 @@ public class FsmLevel01 : StateMachine
         miniboss1 = new Level01Miniboss1(this, miniboss01Enemies);
         wave04 = new Level01Wave04(this, wave04Enemies);
         wave05 = new Level01Wave05(this, wave05Enemies);
+        miniboss2 = new Level01Miniboss2(this, miniboss02Enemies);
         levelEnd = new Level01LevelEnd(this);
 
         waves.Enqueue(wave01);
@@ -43,6 +46,7 @@ public class FsmLevel01 : StateMachine
         waves.Enqueue(miniboss1);
         waves.Enqueue(wave04);
         waves.Enqueue(wave05);
+        waves.Enqueue(miniboss2);
         waves.Enqueue(levelEnd);
     }
 

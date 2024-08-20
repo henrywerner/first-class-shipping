@@ -26,6 +26,14 @@ public class Level01Wave05 : ILevelState
 
             _gameState.SpawnEnemyAfterSeconds(_enemies[2], 7f);
             _gameState.SpawnEnemyAfterSeconds(_enemies[3], 7f);
+
+            _gameState.SpawnEnemyAfterSeconds(_enemies[4], 12f);
+            _gameState.SpawnEnemyAfterSeconds(_enemies[5], 12f);
+
+            _gameState.SpawnEnemyAfterSeconds(_enemies[6], 17f);
+            _gameState.SpawnEnemyAfterSeconds(_enemies[7], 17f);
+            _gameState.SpawnEnemyAfterSeconds(_enemies[8], 18.5f);
+            _gameState.SpawnEnemyAfterSeconds(_enemies[9], 18.5f);
         }
         catch (System.Exception)
         {

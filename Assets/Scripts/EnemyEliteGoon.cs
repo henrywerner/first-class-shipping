@@ -11,7 +11,6 @@ public class EnemyEliteGoon : Enemy
     void Start()
     {
         flightEnterCoroutine = _pathMover.MoveAlongPath(_paths[0], _pathSpeedModifier, gameObject);
-        flightLeaveCoroutine = _pathMover.MoveAlongPath(_paths[1], _pathSpeedModifier, gameObject);
     }
 
     private void FixedUpdate()
@@ -52,10 +51,22 @@ public class EnemyEliteGoon : Enemy
 
         yield return new WaitForSecondsRealtime(1f);
 
-        yield return StartCoroutine(flightLeaveCoroutine);
+        if (_paths.Length > 1) 
+        {
+            yield return StartCoroutine(_pathMover.MoveAlongPath(_paths[1], _pathSpeedModifier, gameObject));
 
-        this.Remove();
+            this.Remove();
 
-        Destroy(_parentObject != null ? _parentObject : gameObject);
+            Destroy(_parentObject != null ? _parentObject : gameObject);
+        } 
+        else 
+        {
+            while (true)
+            {
+                yield return StartCoroutine(ShootGuns());
+
+                yield return new WaitForSecondsRealtime(1f);
+            }    
+        }
     }
 }
