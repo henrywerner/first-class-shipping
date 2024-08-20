@@ -87,4 +87,10 @@ public class BeamGun : Gun
             framesElapsed++;
         }
     }
+
+    protected override void PlaySFX()
+    {
+        //TODO Make a better Beam sound to occur while out
+        AudioController.controller.PlaySFXWithLock(shootSFXObj, transform.position);
+    }
 }
