@@ -52,9 +52,10 @@ public class BeamGun : Gun
         }
     }
 
-    IEnumerator WarningBeams()
+    public IEnumerator WarningBeams()
     {
         // Warning beam VFX / SFX
+        AudioController.controller.PlayLoopSFX(shootSFXObj, transform.position, WarningBeamDuration + BeamDuration);
 
         // Create warning beams
         List<GameObject> _activeWarningBeams = new List<GameObject>();

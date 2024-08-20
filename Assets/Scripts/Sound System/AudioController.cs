@@ -31,6 +31,14 @@ public class AudioController : MonoBehaviour
         }
     }
 
+    public void PlayLoopSFX(GameObject sfxPrefab, Vector3 pos, float loopTime)
+    {
+        if (sfxPrefab != null)
+        {
+            Destroy(Instantiate(sfxPrefab, pos, Quaternion.identity), loopTime);
+        }
+    }
+
     public void SetVolume(string name, float volume)
     {
         if (volume > 0)

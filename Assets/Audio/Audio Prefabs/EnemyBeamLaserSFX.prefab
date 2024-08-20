@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4576888364199771124}
   - component: {fileID: 4224290599217936678}
   m_Layer: 0
-  m_Name: PlayerSpreadShotSFX
+  m_Name: EnemyBeamLaserSFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,15 +43,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6676696680537921506, guid: 2023ec6fd703ac8489c0e90b37dc516c, type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 0.9
-  Loop: 0
+  m_audioClip: {fileID: 8300000, guid: c6c903a697539ce40a0c5703400acd3a, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.8
+  m_Pitch: 0.4
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 162
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -142,4 +142,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: afe4f749d0bf7894683bb80232e2e30e, type: 3}
+  - {fileID: 8300000, guid: c6c903a697539ce40a0c5703400acd3a, type: 3}
