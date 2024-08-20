@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac131fcc6cfe16448b52c92b024a040e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 5
+  maxHp: 3
   currentHp: 0
   hurtBufferTime: 0
   _hitSFX: {fileID: 4792592769389947601, guid: 629c91f34d7b37a48a2b752c961a10f4, type: 3}
@@ -226,6 +226,7 @@ MonoBehaviour:
   _hitSprite: {fileID: 2745692232161112648}
   flashSeconds: 0.05
   _destroyVFX: {fileID: 288663964995989566, guid: 9656d05ddd5b22d4a859a18a8a69dfd5, type: 3}
+  _useHealthScaling: 1
 --- !u!61 &8054645485590633035
 BoxCollider2D:
   m_ObjectHideFlags: 0

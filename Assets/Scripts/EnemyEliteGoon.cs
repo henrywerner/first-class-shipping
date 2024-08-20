@@ -8,6 +8,7 @@ public class EnemyEliteGoon : Enemy
     [SerializeField] private GameObject _gunNode;
 
     private IEnumerator flightEnterCoroutine, flightLeaveCoroutine;
+    private PlayerController player;
     void Start()
     {
         flightEnterCoroutine = _pathMover.MoveAlongPath(_paths[0], _pathSpeedModifier, gameObject);
@@ -15,8 +16,15 @@ public class EnemyEliteGoon : Enemy
 
     private void FixedUpdate()
     {
-        Vector3 direction = FindObjectOfType<PlayerController>().gameObject.transform.position - _gunNode.transform.position;
-        _gunNode.transform.rotation = Quaternion.FromToRotation(Vector3.up, direction);
+        if (player != null)
+        {
+            Vector3 direction = player.transform.position - _gunNode.transform.position;
+            _gunNode.transform.rotation = Quaternion.FromToRotation(Vector3.up, direction);
+        }
+        else
+        {
+            player = FindObjectOfType<PlayerController>();
+        }
     }
 
     public override void StartMoving()
