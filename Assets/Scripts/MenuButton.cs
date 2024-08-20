@@ -55,7 +55,7 @@ public class MenuButton : MonoBehaviour, IPointerDownHandler, IPointerClickHandl
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log("Clicked");
-        _spriteRend.color = new Color(1f, 0f, 1f, 1f);
+        _spriteRend.color = new Color32(89, 122, 255, 255);
 
         switch (type)
         {
@@ -83,7 +83,7 @@ public class MenuButton : MonoBehaviour, IPointerDownHandler, IPointerClickHandl
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        _spriteRend.color = new Color(1f, 0.7216981f, 1f, 1f);
+        _spriteRend.color = new Color32(153, 173, 255, 255);
     }
 
     public void OnPointerExit(PointerEventData eventData)

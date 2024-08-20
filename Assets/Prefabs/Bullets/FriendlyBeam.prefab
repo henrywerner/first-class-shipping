@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
-  _tickrate: 1
+  _tickrate: 0.25
   isEnemy: 0
 --- !u!1 &7723282652460130139
 GameObject:

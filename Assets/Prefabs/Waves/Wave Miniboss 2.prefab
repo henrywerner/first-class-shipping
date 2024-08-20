@@ -433,6 +433,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2562553627625287213, guid: 8ccb2b5770cdbb94e8612446f3b30dcf, type: 3}
   m_PrefabInstance: {fileID: 1410768942820629994}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3651122816076740380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2395750325524490998, guid: 8ccb2b5770cdbb94e8612446f3b30dcf, type: 3}
+  m_PrefabInstance: {fileID: 1410768942820629994}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3866559746840976170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2755298604674303680, guid: 8ccb2b5770cdbb94e8612446f3b30dcf, type: 3}
@@ -463,12 +468,12 @@ MonoBehaviour:
   maxHp: 30
   currentHp: 0
   hurtBufferTime: 0
-  _hitSFX: {fileID: 0}
-  _deathSFX: {fileID: 0}
-  _hitSprite: {fileID: 0}
+  _hitSFX: {fileID: 4792592769389947601, guid: 629c91f34d7b37a48a2b752c961a10f4, type: 3}
+  _deathSFX: {fileID: 4792592769389947601, guid: a352da12388e0d04793f1e98d0de76d5, type: 3}
+  _hitSprite: {fileID: 3651122816076740380}
   flashSeconds: 0.1
-  _destroyVFX: {fileID: 0}
-  _useHealthScaling: 1
+  _destroyVFX: {fileID: 288663964995989566, guid: 9656d05ddd5b22d4a859a18a8a69dfd5, type: 3}
+  _useHealthScaling: 0
 --- !u!61 &8245139748093600482
 BoxCollider2D:
   m_ObjectHideFlags: 0

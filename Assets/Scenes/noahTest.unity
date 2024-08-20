@@ -334,6 +334,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1330ab119d8340949b2db7d4ea9b1c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  masterMixerGroup: {fileID: 0}
+  sfxMixerGroup: {fileID: 0}
+  musicMixerGroup: {fileID: 0}
 --- !u!4 &903084507
 Transform:
   m_ObjectHideFlags: 0
@@ -475,6 +478,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e6879e47a6cd694288ca90b97409596, type: 3}
+--- !u!1001 &1324940696
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7060141778017827267, guid: ed594ada667768344bba16bc292fff04, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.281534
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060141778017827267, guid: ed594ada667768344bba16bc292fff04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.8888335
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060141778017827267, guid: ed594ada667768344bba16bc292fff04, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060141778017827267, guid: ed594ada667768344bba16bc292fff04, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060141778017827267, guid: ed594ada667768344bba16bc292fff04, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060141778017827267, guid: ed594ada667768344bba16bc292fff04, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060141778017827267, guid: ed594ada667768344bba16bc292fff04, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060141778017827267, guid: ed594ada667768344bba16bc292fff04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060141778017827267, guid: ed594ada667768344bba16bc292fff04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060141778017827267, guid: ed594ada667768344bba16bc292fff04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7287493155487047333, guid: ed594ada667768344bba16bc292fff04, type: 3}
+      propertyPath: m_Name
+      value: Enemy Spammer Goon
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed594ada667768344bba16bc292fff04, type: 3}
 --- !u!1001 &1423795639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -900,3 +960,4 @@ SceneRoots:
   - {fileID: 903084507}
   - {fileID: 272712835}
   - {fileID: 1683621993}
+  - {fileID: 1324940696}
