@@ -29,7 +29,7 @@ public class MenuHelper : MonoBehaviour
     void Start()
     {
         currentButton = 1;
-        InvokeRepeating("SpawnNextButton", 0f, 4f);
+        InvokeRepeating("SpawnNextButton", 0f, 3.2f);
     }
 
     void Update()
@@ -46,7 +46,8 @@ public class MenuHelper : MonoBehaviour
 
     void SpawnNextButton() {
         float xLoc = 15f;
-        float yLoc = UnityEngine.Random.Range(-3, 3);
+        // float yLoc = UnityEngine.Random.Range(-3, 3);
+        float yLoc = 0;
         float zLoc = 0f;
         
         GameObject newButton = Instantiate(_buttonPrefab, new Vector3(xLoc, yLoc, zLoc), Quaternion.identity);

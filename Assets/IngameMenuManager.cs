@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenuManager : MonoBehaviour
+public class IngameMenuManager : MonoBehaviour
 {
-    private static PauseMenuManager _current;
+    private static IngameMenuManager _current;
 
-    public static PauseMenuManager current
+    public static IngameMenuManager current
     {
         get
         {
             if (_current == null)
             {
-                _current = FindObjectOfType<PauseMenuManager>();
+                _current = FindObjectOfType<IngameMenuManager>();
             }
             return _current;
         }
@@ -25,7 +25,19 @@ public class PauseMenuManager : MonoBehaviour
         current = this;
     }
 
-    [SerializeField] private GameObject _pauseMenuCanvas;
+    [SerializeField] private GameObject _pauseMenuCanvas, _deathScreenCanvas, _winScreenCanvas;
+
+    public void ShowDeathScreen() 
+    {
+        Time.timeScale = 0;
+        _deathScreenCanvas.SetActive(true);
+    }
+
+    public void ShowWinScreen()
+    {
+        Time.timeScale = 0;
+        _winScreenCanvas.SetActive(true);
+    }
 
     public void PauseGame()
     {

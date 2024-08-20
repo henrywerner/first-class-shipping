@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 8672757520187183312}
   - component: {fileID: 45246451648144890}
   m_Layer: 0
-  m_Name: Pause Menu Manager
+  m_Name: Ingame Menu Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,6 +184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauseMenuCanvas: {fileID: 0}
+  _deathScreenCanvas: {fileID: 0}
+  _winScreenCanvas: {fileID: 0}
 --- !u!1001 &8404998644474275668
 PrefabInstance:
   m_ObjectHideFlags: 0
