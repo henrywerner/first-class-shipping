@@ -218,6 +218,10 @@ MonoBehaviour:
   BeamCoolDown: 3
   BeamWidth: 0.75
   BeamLerpFrames: 60
+  _warningBeam: {fileID: 9193693392564782593, guid: d072ab5969c4d67438b93d63a88641cf, type: 3}
+  WarningBeamWidth: 0.4
+  WarningBeamLerpFrames: 30
+  WarningBeamDuration: 0.5
 --- !u!1 &5622747007552165121
 GameObject:
   m_ObjectHideFlags: 0
