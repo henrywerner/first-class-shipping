@@ -79,7 +79,8 @@ public class MenuHelper : MonoBehaviour
         }
 
         Rigidbody2D rb = newButton.GetComponent<Rigidbody2D>();
-        rb.AddTorque(UnityEngine.Random.Range(-0.2f, 0.2f), ForceMode2D.Impulse);
+        float angle = (currentButton % 2 == 0) ? UnityEngine.Random.Range(0f, 0.05f) : UnityEngine.Random.Range(-0.05f, 0f);
+        rb.AddTorque(angle, ForceMode2D.Impulse);
         // rb.AddForce(new Vector2(UnityEngine.Random.Range(-30, -20), 0));
 
         currentButton++;
