@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 225455807}
   - component: {fileID: 225455806}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Life Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -600,10 +600,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 225455805}
+  - {fileID: 497761311}
   - {fileID: 918956015}
   - {fileID: 1199176567}
   - {fileID: 843308987}
-  - {fileID: 225455805}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -817,6 +818,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 45246451648144890, guid: 14248effeac227e45b201f4afb5c7f62, type: 3}
+      propertyPath: _fadeToWhite
+      value: 
+      objectReference: {fileID: 497761312}
+    - target: {fileID: 45246451648144890, guid: 14248effeac227e45b201f4afb5c7f62, type: 3}
       propertyPath: _pauseMenuCanvas
       value: 
       objectReference: {fileID: 918956014}
@@ -963,6 +968,81 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1471502107450089437, guid: 736ec5e03ca11e14280f2b9fcf3b5b30, type: 3}
   m_PrefabInstance: {fileID: 5538104790319167040}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &497761310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 497761311}
+  - component: {fileID: 497761313}
+  - component: {fileID: 497761312}
+  m_Layer: 5
+  m_Name: FadeOutImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &497761311
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497761310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 226933109}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &497761312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497761310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &497761313
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497761310}
+  m_CullTransparentMesh: 1
 --- !u!1 &503843467
 GameObject:
   m_ObjectHideFlags: 0
@@ -4206,6 +4286,14 @@ PrefabInstance:
     - target: {fileID: 4661442644366820089, guid: 9defba2ded4ff644aa28a23ef22af67c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338979775286485966, guid: 9defba2ded4ff644aa28a23ef22af67c, type: 3}
+      propertyPath: maxHp
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338979775286485966, guid: 9defba2ded4ff644aa28a23ef22af67c, type: 3}
+      propertyPath: _useHealthScaling
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6202143505057124194, guid: 9defba2ded4ff644aa28a23ef22af67c, type: 3}
       propertyPath: ScreenShakeDuration

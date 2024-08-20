@@ -197,7 +197,7 @@ public abstract class AbsAttachable : MonoBehaviour
 
         while (_pickupIndicator.GetComponent<SpriteRenderer>().material.color.a != alphaEnd && !_hasAttached)
         {
-            Debug.Log("alpha value = " + _pickupIndicator.GetComponent<SpriteRenderer>().material.color.a);
+            // Debug.Log("alpha value = " + _pickupIndicator.GetComponent<SpriteRenderer>().material.color.a);
             _pickupIndicator.GetComponent<SpriteRenderer>().material.color = Color.Lerp(startColor, colorGoal, (float)framesElapsed / frames);
             yield return new WaitForFixedUpdate();
             framesElapsed++;
