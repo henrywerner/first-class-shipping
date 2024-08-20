@@ -216,7 +216,7 @@ MonoBehaviour:
   shootSFXObj: {fileID: 0}
   BeamDuration: 3
   BeamCoolDown: 3
-  BeamWidth: 0.45
+  BeamWidth: 0.75
   BeamLerpFrames: 60
 --- !u!1 &5622747007552165121
 GameObject:
