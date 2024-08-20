@@ -14,12 +14,13 @@ public abstract class Gun : MonoBehaviour, IShootable
     // Fire should be used by the player to actually fire the weapons
     public abstract void Fire();
 
-    public virtual void Shoot() {
+    public virtual void Shoot()
+    {
         foreach (GameObject node in _nodes)
         {
             GameObject bullet = Instantiate(_bullet, node.transform.position, node.transform.rotation);
         }
-        AudioController.controller.PlaySFX(shootSFXObj, transform.position);
+        PlaySFX();
     }
 
     public virtual void ShootWithCooldown(float rate)
@@ -42,5 +43,10 @@ public abstract class Gun : MonoBehaviour, IShootable
             yield return new WaitForSeconds(waitTime);
             _isOnCooldown = false;
         }
+    }
+
+    protected virtual void PlaySFX()
+    {
+        AudioController.controller.PlaySFX(shootSFXObj, transform.position);
     }
 }

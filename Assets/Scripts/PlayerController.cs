@@ -167,21 +167,22 @@ public class PlayerController : MonoBehaviour
         {
             // Require a part to use dodge
             Vector3 detachDirection = _moveDirection != Vector3.zero ? -_moveDirection : Vector3.left;
-            if (DetatchSingle(detachDirection, _dodgeDetachSpeed)) //Later might need to be more or none.
+            //if (DetatchSingle(detachDirection, _dodgeDetachSpeed)) //Turn this back on if you want to require a gun to dodge.
+            //{
+            DetatchSingle(detachDirection, _dodgeDetachSpeed);
+            Debug.Log("Dodge this!");
+            // Set invul
+            _healthSystem.SetTempInvul(_dodgeInvulTime);
+            foreach (var gun in _gunList)
             {
-                Debug.Log("Dodge this!");
-                // Set invul
-                _healthSystem.SetTempInvul(_dodgeInvulTime);
-                foreach(var gun in _gunList)
-                {
-                    gun.GetComponent<AttachmentDamageable>()?.SetTempInvul(_dodgeInvulTime);
-                }
-                // Show dodge visuals and play sfx
-                _dodgeSprite?.SetActive(true);
-                AudioController.controller.PlaySFX(_dodgeSFX, transform.position);
-                // Start Coroutine to count frames/time till dodge roll end. Pass in frames
-                StartCoroutine(DodgeSpeedCoroutine(_dodgeBoostTime));
+                gun.GetComponent<AttachmentDamageable>()?.SetTempInvul(_dodgeInvulTime);
             }
+            // Show dodge visuals and play sfx
+            _dodgeSprite?.SetActive(true);
+            AudioController.controller.PlaySFX(_dodgeSFX, transform.position);
+            // Start Coroutine to count frames/time till dodge roll end. Pass in frames
+            StartCoroutine(DodgeSpeedCoroutine(_dodgeBoostTime));
+            // }
         }
     }
 
