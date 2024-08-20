@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class LivesManager : MonoBehaviour
 {
-    [SerializeField] int lives = 3;
+    [SerializeField] public int lives = 3;
     [SerializeField] float delayRespawnTime = 1f;
     [SerializeField] GameObject PlayerObject;
-    [SerializeField] float spawnEyeFramesSeconds = 1.5f; 
+    [SerializeField] float spawnEyeFramesSeconds = 1.5f;
+    [SerializeField] GameObject[] lifeIcons;
+
     public static LivesManager manager;
-    
 
     GameObject _currentPlayer;
 
@@ -27,6 +28,11 @@ public class LivesManager : MonoBehaviour
         SpawnPlayer();
     }
 
+    private void Start()
+    {
+        updateLivesHUD();
+    }
+
     private void SpawnPlayer()
     {
         _currentPlayer = Instantiate(PlayerObject, PlayerObject.transform.position, PlayerObject.transform.rotation);
@@ -38,6 +44,7 @@ public class LivesManager : MonoBehaviour
     private void PlayerKilled()
     {
         lives--;
+        updateLivesHUD();
 
         if(lives > 0)
         {
@@ -46,6 +53,14 @@ public class LivesManager : MonoBehaviour
         else
         {
             IngameMenuManager.current.ShowDeathScreen();
+        }
+    }
+
+    private void updateLivesHUD()
+    {
+        for (int i = 0; i < lifeIcons.Length; i++)
+        {
+            lifeIcons[i].SetActive(lives > i);
         }
     }
 

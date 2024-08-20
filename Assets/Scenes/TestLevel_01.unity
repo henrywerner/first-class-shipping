@@ -828,6 +828,22 @@ PrefabInstance:
       propertyPath: _deathScreenCanvas
       value: 
       objectReference: {fileID: 1199176566}
+    - target: {fileID: 2935873058004297533, guid: 14248effeac227e45b201f4afb5c7f62, type: 3}
+      propertyPath: lifeIcons.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2935873058004297533, guid: 14248effeac227e45b201f4afb5c7f62, type: 3}
+      propertyPath: lifeIcons.Array.data[0]
+      value: 
+      objectReference: {fileID: 2091144294}
+    - target: {fileID: 2935873058004297533, guid: 14248effeac227e45b201f4afb5c7f62, type: 3}
+      propertyPath: lifeIcons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1849174092}
+    - target: {fileID: 2935873058004297533, guid: 14248effeac227e45b201f4afb5c7f62, type: 3}
+      propertyPath: lifeIcons.Array.data[2]
+      value: 
+      objectReference: {fileID: 638053056}
     - target: {fileID: 5396898948927920259, guid: 14248effeac227e45b201f4afb5c7f62, type: 3}
       propertyPath: m_Name
       value: _Managers
