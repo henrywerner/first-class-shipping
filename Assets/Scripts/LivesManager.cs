@@ -7,6 +7,7 @@ public class LivesManager : MonoBehaviour
     [SerializeField] int lives = 3;
     [SerializeField] float delayRespawnTime = 1f;
     [SerializeField] GameObject PlayerObject;
+    [SerializeField] float spawnEyeFramesSeconds = 1.5f; 
     public static LivesManager manager;
     
 
@@ -29,7 +30,9 @@ public class LivesManager : MonoBehaviour
     private void SpawnPlayer()
     {
         _currentPlayer = Instantiate(PlayerObject, PlayerObject.transform.position, PlayerObject.transform.rotation);
-        _currentPlayer.GetComponent<HealthSystem>().WasKilled += PlayerKilled;
+        var hs = _currentPlayer.GetComponent<HealthSystem>();
+        hs.WasKilled += PlayerKilled;
+        hs.SetTempInvul(spawnEyeFramesSeconds);
     }
 
     private void PlayerKilled()

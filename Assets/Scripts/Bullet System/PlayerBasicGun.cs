@@ -9,4 +9,9 @@ public class PlayerBasicGun : Gun
     {
         ShootWithCooldown(CooldownLength);
     }
+
+    protected override void PlaySFX()
+    {
+        AudioController.controller.PlaySFXWithLock(shootSFXObj, transform.position);
+    }
 }
